@@ -1,0 +1,59 @@
+---
+import NavLink from "./NavLink.astro";
+---
+
+<script>
+    const main = document.querySelector("main");
+    const thumb = document.getElementById("scroll-thumb");
+    const link2 = document.getElementById("link2");
+    const link3 = document.getElementById("link3");
+    const link4 = document.getElementById("link4");
+    const link5 = document.getElementById("link5");
+
+    main?.addEventListener("scroll", () => {
+        const scrollTop = main.scrollTop + window.innerHeight;
+        const scrollHeight = main.scrollHeight;
+        const scrollPercent = scrollTop / scrollHeight;
+
+        if (!thumb) return;
+
+        thumb.style.scale = `1 ${scrollPercent}`;
+
+        if (scrollPercent >= 0.36) {
+            link2?.classList.add("light");
+        } else link2?.classList.remove("light");
+
+        if (scrollPercent >= 0.56) {
+            link3?.classList.add("light");
+        } else link3?.classList.remove("light");
+
+        if (scrollPercent >= 0.76) {
+            link4?.classList.add("light");
+        } else link4?.classList.remove("light");
+
+        if (scrollPercent >= 0.96) {
+            link5?.classList.add("light");
+        } else link5?.classList.remove("light");
+    });
+</script>
+
+<nav class="h-full flex items-center p-2">
+    <ul id="link-list" class="link-list relative pl-4">
+        <span id="scroll-thumb"></span>
+        <li class="">
+            <NavLink className="light" text="Inicio" />
+        </li>
+        <li class="">
+            <NavLink id="link2" text="Proyectos" />
+        </li>
+        <li>
+            <NavLink id="link3" text="Sobre mí" />
+        </li>
+        <li>
+            <NavLink id="link4" text="Skills" />
+        </li>
+        <li>
+            <NavLink id="link5" text="Contacto" />
+        </li>
+    </ul>
+</nav>
