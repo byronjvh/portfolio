@@ -2,7 +2,7 @@
 
 body {
     --scroll-bg-color: #18454d;
-    --white: #fff;
+    --light: #fff;
     --bg-color: #00262c;
     --p-color: #c2dace;
     --title-color: #ffffff;
@@ -116,14 +116,21 @@ main::-webkit-scrollbar {
     left: 0;
     top: 0;
     border-radius: 1px;
-    background-color: var(--white);
-    box-shadow: 0px 0px 8px 0px var(--white);
+    background-color: var(--light);
+    box-shadow: 0px 0px 8px 0px var(--light);
     scale: 1 0.2;
     transition: scale .3s ease;
     transform-origin: top;
 }
 
-.nav-link {}
+.nav-link {
+    color: var(--title-color);
+    transition: text-shadow .3s ease-out;
+}
+
+.nav-link:hover {
+    text-shadow: 0px 0px 10px var(--light);
+}
 
 .nav-link::before {
     content: '';
@@ -133,12 +140,12 @@ main::-webkit-scrollbar {
     height: 10px;
     width: 10px;
     border-radius: 99999px;
-    box-shadow: 0px 0px 0px 0px var(--white);
+    box-shadow: 0px 0px 0px 0px var(--light);
     background-color: var(--scroll-bg-color);
     transition: box-shadow .4s ease-in, background .5s ease;
 }
 
 .nav-link.light::before {
-    box-shadow: 0px 0px 10px 0px var(--white);
-    background-color: var(--white);
+    box-shadow: 0px 0px 10px 0px var(--light);
+    background-color: var(--light);
 }
