@@ -1,11 +1,15 @@
 ---
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
+import Section from "./Section.astro";
 ---
 
-<main id="container" class="overflow-y-scroll snap-y max-h-svh pr-2">
+<main
+	id="container"
+	class="overflow-y-scroll scroll-smooth snap-y max-h-svh pr-2"
+>
 	<!-- Hero Section -->
-	<section class="h-svh flex items-center snap-center">
+	<Section id="home" className="">
 		<div class="">
 			<h1 class="text-[64px]">Byron Vargas Hernández</h1>
 			<p>
@@ -14,10 +18,10 @@ import background from "../assets/background.svg";
 				precisión.
 			</p>
 		</div>
-	</section>
+	</Section>
 
 	<!-- Projects Section -->
-	<section class="h-svh snap-center flex flex-col justify-center">
+	<Section id="projects" className="flex-col justify-center items-start">
 		<h2>Proyectos</h2>
 		<div class="projects">
 			<div class="project-card">
@@ -38,10 +42,10 @@ import background from "../assets/background.svg";
 				<button>Ver más</button>
 			</div>
 		</div>
-	</section>
+	</Section>
 
 	<!-- About Section -->
-	<section class="about h-svh snap-center flex flex-col justify-center">
+	<Section id="about" className="about flex-col justify-center items-start">
 		<h2>Sobre mí</h2>
 		<p>
 			Soy un desarrollador web enfocado en el Front End. Me gusta
@@ -49,10 +53,10 @@ import background from "../assets/background.svg";
 			Estoy en constante aprendizaje, explorando herramientas modernas y
 			también incursionando en el desarrollo Back End.
 		</p>
-	</section>
+	</Section>
 
 	<!-- Skills Section -->
-	<section class="h-svh snap-center flex flex-col justify-center">
+	<Section id="skills" className="flex-col justify-center items-start">
 		<h2>Tecnologías</h2>
 		<p>
 			Me especializo en Desarrollo Web Front End con tecnologías modernas,
@@ -84,12 +88,10 @@ import background from "../assets/background.svg";
 				</p>
 			</div>
 		</section>
-	</section>
-
-	<!-- Extras Section -->
+	</Section>
 
 	<!-- Contact Section -->
-	<section class="h-svh snap-center flex flex-col justify-center">
+	<Section id="contact" className="flex-col justify-center items-start">
 		<h2>Contacto</h2>
 		<p>
 			¿Una idea en mente o un proyecto en camino? Estoy abierto a
@@ -98,5 +100,5 @@ import background from "../assets/background.svg";
 		<button onclick="window.location.href='mailto:byron@example.com'"
 			>Escríbeme</button
 		>
-	</section>
+	</Section>
 </main>
