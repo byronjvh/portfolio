@@ -1,31 +1,35 @@
 ---
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
+import GitHub from "./icons/GitHub.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Resume from "./icons/Resume.astro";
 import Section from "./Section.astro";
 ---
 
 <main
 	id="container"
-	class="overflow-y-scroll scroll-smooth snap-y max-h-svh pr-6"
+	class="overflow-y-scroll scroll-smooth snap-y max-h-svh pr-10"
 >
 	<!-- Hero Section -->
 	<Section id="home" className="">
-		<div class="flex flex-col gap-4">
-			<div>
-				<h1 class="text-6xl">Byron Vargas Hernández</h1>
-				<p>
-					Desarrollo soluciones digitales que mejoran la experiencia del
-					usuario y marcan la diferencia, combinando innovación y
+		<div class="flex flex-col gap-5 text-balance">
+			<div class="flex flex-col gap-3">
+				<h1 class="text-8xl">Byron Vargas Hernández</h1>
+				<p class="text-lg leading-6">
+					Desarrollo soluciones digitales que mejoran la experiencia
+					del usuario y marcan la diferencia, combinando innovación y
 					precisión.
 				</p>
 			</div>
-			<div class="flex gap-4 items-center">
-				<div class="card">
-					<a href="">gh</a>
-					<a href="">in</a>
-					<a href="">cv</a>
-				</div>
-				<a href="">Dowload Resume</a>
+			<div class="flex gap-2 items-center">
+				<a href="" class="button"><GitHub size="18" /> Ver GitHub</a>
+				<a href="" class="button button-2"
+					><Linkedin size="18" /> Conectar</a
+				>
+				<a href="" class="button button-3"
+					><Resume size="22" /> Descargar CV</a
+				>
 			</div>
 		</div>
 	</Section>

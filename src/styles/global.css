@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
 body {
-    --scroll-bg-color: #18454d;
+    --scroll-bg-color: #1b3a63;
     --light: #fff;
-    --bg-color: #00262c;
-    --p-color: #c2dace;
+    --bg-color: #001F38;
+    --p-color: #e2ded7;
     --title-color: #ffffff;
-    --accent: #3366dd;
+    --accent: #004297;
+    --accent2: #0b73d4;
+    --accent3: #DB9F1F;
+    --accent2-gradient: linear-gradient(45deg, rgba(11, 115, 212, 1) 0%, rgba(0, 91, 183, 1) 100%);
 
+    --font-title: 'Outfit', sans-serif;
+    --font-p: "Maven Pro", sans-serif;
 
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-p);
     margin: 0 auto;
     padding: 0 8px 0 8px;
-    max-width: 800px;
+    max-width: 790px;
     height: 100svh;
     background-color: var(--bg-color);
     color: var(--p-color);
@@ -23,6 +28,8 @@ h1,
 h2,
 h3 {
     color: var(--title-color);
+    font-family: var(--font-title);
+    font-weight: bold;
 }
 
 
@@ -127,6 +134,7 @@ main::-webkit-scrollbar {
 .nav-link {
     color: var(--title-color);
     transition: text-shadow .3s ease-out;
+    font-family: var(--font-title);
 }
 
 .nav-link:hover {
@@ -136,7 +144,7 @@ main::-webkit-scrollbar {
 .nav-link::before {
     content: '';
     position: absolute;
-    left: -20px;
+    left: -28px;
     bottom: 0px;
     height: 10px;
     width: 10px;
@@ -151,13 +159,22 @@ main::-webkit-scrollbar {
     background-color: var(--light);
 }
 
-.card {
-    padding: 16px 24px;
-    border: 1px solid var(--accent);
-    border-radius: 8px;
-    color: var(--accent);
+.button {
+    background-color: var(--accent);
+    padding: 10px 40px;
+    border-radius: 9999px;
     display: flex;
     justify-content: center;
-    gap: 16px;
-    width: max-content;
+    font-weight: bold;
+    color: var(--title-color);
+    gap: 6px;
+    align-items: center;
+}
+
+.button-2 {
+    background: var(--accent2-gradient);
+}
+
+.button-3 {
+    background-color: var(--accent3);
 }
