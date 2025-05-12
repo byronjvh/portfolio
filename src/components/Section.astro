@@ -2,6 +2,10 @@
 const { id, className } = Astro.props;
 ---
 
-<section id={id} } class=`h-svh flex items-center snap-center ${className}`>
+<section
+    id={id}
+    }
+    class=`h-svh flex relative items-center snap-center ${className}`
+>
     <slot />
 </section>

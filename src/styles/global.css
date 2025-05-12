@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     --scroll-bg-color: #1b3a63;
     --light: #fff;
@@ -9,7 +14,7 @@ body {
     --accent: #004297;
     --accent2: #0b73d4;
     --accent3: #DB9F1F;
-    --accent2-gradient: linear-gradient(45deg, rgba(11, 115, 212, 1) 0%, rgba(0, 91, 183, 1) 100%);
+    --accent2-gradient: linear-gradient(65deg, rgba(11, 115, 212, 1) 8%, rgba(147, 197, 245, 1) 45%, rgba(11, 115, 212, 1) 65%, rgba(0, 91, 183, 1) 100%);
 
     --font-title: 'Outfit', sans-serif;
     --font-p: "Maven Pro", sans-serif;
@@ -33,22 +38,6 @@ h3 {
 }
 
 
-.text-center {
-    text-align: center;
-}
-
-.project-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-}
-
 .skills-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -64,31 +53,6 @@ h3 {
     border-radius: 0.5rem;
     text-align: center;
     font-weight: 500;
-}
-
-button {
-    background-color: #111;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-button:hover {
-    background-color: #333;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #777;
-    margin: 4rem 0 2rem;
-}
-
-.experience-card {
-    margin-bottom: 1.5rem;
 }
 
 main {
@@ -160,8 +124,8 @@ main::-webkit-scrollbar {
 }
 
 .button {
-    background-color: var(--accent);
-    padding: 10px 40px;
+    position: relative;
+    padding: 8px 38px;
     border-radius: 9999px;
     display: flex;
     justify-content: center;
@@ -169,12 +133,33 @@ main::-webkit-scrollbar {
     color: var(--title-color);
     gap: 6px;
     align-items: center;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+}
+
+.button-1 {
+    border: 3px solid var(--accent);
+    background-color: var(--accent);
+    transition: background .2s ease-out;
+}
+
+.button-1:hover {
+    background-color: transparent;
 }
 
 .button-2 {
     background: var(--accent2-gradient);
+    background-size: 250% 115%;
+    background-position: -250px -3px;
+    transition: background .3s ease-out;
+}
+
+.button-2:hover {
+    background-position: -3px -3px;
 }
 
 .button-3 {
     background-color: var(--accent3);
 }
+
+.button-1:hover::before {}
