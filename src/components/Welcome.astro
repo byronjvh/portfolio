@@ -2,6 +2,7 @@
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import Arrow from "./icons/Arrow.astro";
+import DownloadArrow from "./icons/DownloadArrow.astro";
 import GitHub from "./icons/GitHub.astro";
 import Linkedin from "./icons/Linkedin.astro";
 import Resume from "./icons/Resume.astro";
@@ -31,8 +32,10 @@ import Section from "./Section.astro";
 					><Linkedin size="18" /> Conectar</a
 				>
 				<a href="" class="button button-3"
-					><Resume size="22" /> Descargar CV</a
-				>
+					><Resume className="icon" size="22" />
+					<span>Descargar CV</span>
+					<DownloadArrow className="button-3-arrow" />
+				</a>
 			</div>
 		</div>
 		<span

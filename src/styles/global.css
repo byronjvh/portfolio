@@ -160,6 +160,33 @@ main::-webkit-scrollbar {
 
 .button-3 {
     background-color: var(--accent3);
+    overflow: hidden;
 }
 
-.button-1:hover::before {}
+.button-3-arrow {
+    position: absolute;
+    left: 200px;
+    top: 50%;
+    height: 100%;
+    width: max-content;
+    transform: translate(-5px, -50%);
+    border-radius: 50%;
+    background-color: #fff4;
+    padding: 4px;
+    transition: transform .2s ease-out;
+}
+
+.button-3 span,
+.button-3 .icon {
+    transform: translateX(0);
+    transition: transform .2s ease-out;
+}
+
+.button-3:hover span,
+.button-3:hover .icon {
+    transform: translateX(-16px);
+}
+
+.button-3:hover .button-3-arrow {
+    transform: translate(-34px, -50%);
+}
