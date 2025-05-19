@@ -9,6 +9,7 @@ body {
     --scroll-bg-color: #1b3a63;
     --light: #fff;
     --bg-color: #001F38;
+    --card-bg-color: #122d44;
     --p-color: #e2ded7;
     --title-color: #ffffff;
     --accent: #004297;
@@ -169,7 +170,7 @@ main::-webkit-scrollbar {
     top: 50%;
     height: 100%;
     width: max-content;
-    transform: translate(-5px, -50%);
+    transform: translate(-4px, -50%);
     border-radius: 50%;
     background-color: #fff4;
     padding: 4px;
@@ -189,4 +190,20 @@ main::-webkit-scrollbar {
 
 .button-3:hover .button-3-arrow {
     transform: translate(-34px, -50%);
+}
+
+.projects {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.projects::-webkit-scrollbar {
+    display: none;
+}
+
+.project-card {
+    border: 1px solid var(--light);
+    padding: 20px;
+    border-radius: 16px;
+    background-color: var(--card-bg-color);
 }
