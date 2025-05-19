@@ -50,34 +50,48 @@ import Section from "./Section.astro";
 		className="flex-col justify-center items-start gap-4"
 	>
 		<h2 class="text-xl">Proyectos</h2>
-		<div class="projects flex gap-8 overflow-x-scroll px-4">
-			<div class="project-card shrink-0 w-full flex flex-col gap-4">
-				<img
-					src="https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg"
-					alt="proyecto"
-					class="h-[280px] w-full object-cover rounded-lg"
-				/>
-				<div>
-					<h3>TaskFlow App</h3>
+		<div class="relative">
+			<div class="projects flex gap-24 overflow-x-scroll px-12">
+				<div class="project-card shrink-0 w-full flex flex-col gap-4">
+					<img
+						src="https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg"
+						alt="proyecto"
+						class="h-[280px] w-full object-cover rounded-lg"
+					/>
+					<div>
+						<h3>TaskFlow App</h3>
+						<p>
+							Una app de gestión de tareas por equipos con
+							autenticación y persistencia de datos. Construida
+							con React, Tailwind y SQLite.
+						</p>
+					</div>
+					<div class="flex gap-2">
+						<ButtonLink className="button-1 text-sm"
+							>Ver Código</ButtonLink
+						>
+						<ButtonLink className="button-2 text-sm"
+							>Visitar Página</ButtonLink
+						>
+					</div>
+				</div>
+				<div class="project-card shrink-0 w-full">
+					<h3>Portafolio Personal</h3>
 					<p>
-						Una app de gestión de tareas por equipos con
-						autenticación y persistencia de datos. Construida con
-						React, Tailwind y SQLite.
+						Este sitio web que estás viendo, hecho desde cero con
+						HTML, CSS y mucho cariño.
 					</p>
-				</div>
-				<div class="flex gap-2">
-					<ButtonLink className="button-1">Ver Código</ButtonLink>
-					<ButtonLink className="button-2">Visitar Página</ButtonLink>
+					<button>Ver más</button>
 				</div>
 			</div>
-			<div class="project-card shrink-0 w-full">
-				<h3>Portafolio Personal</h3>
-				<p>
-					Este sitio web que estás viendo, hecho desde cero con HTML,
-					CSS y mucho cariño.
-				</p>
-				<button>Ver más</button>
-			</div>
+			<button
+				class="absolute cursor-pointer h-16 w-10 left-0 top-1/2 -translate-y-1/2 flex items-center justify-center"
+				><Arrow className="rotate-90" size="32" /></button
+			>
+			<button
+				class="absolute cursor-pointer h-16 w-10 right-0 top-1/2 -translate-y-1/2 flex items-center justify-center"
+				><Arrow className="-rotate-90" size="32" /></button
+			>
 		</div>
 	</Section>
 

@@ -1,5 +1,5 @@
 ---
-const { size } = Astro.props;
+const { size, className } = Astro.props;
 ---
 
 <svg
@@ -9,6 +9,7 @@ const { size } = Astro.props;
     height=`${size}px`
     viewBox="0 -4.5 20 20"
     version="1.1"
+    class={className}
 >
     <title>arrow_down [#338]</title>
     <desc>Created with Sketch.</desc>
