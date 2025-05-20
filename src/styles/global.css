@@ -12,7 +12,8 @@ body {
     --card-bg-color: #122d44;
     --p-color: #e2ded7;
     --title-color: #ffffff;
-    --accent: #004297;
+    --accent: #004aaa;
+    --accent-transparency: #004aaa33;
     --accent2: #0b73d4;
     --accent3: #DB9F1F;
     --accent2-gradient: linear-gradient(65deg, rgba(11, 115, 212, 1) 8%, rgba(147, 197, 245, 1) 45%, rgba(11, 115, 212, 1) 65%, rgba(0, 91, 183, 1) 100%);
@@ -126,8 +127,8 @@ main::-webkit-scrollbar {
 
 .button {
     position: relative;
-    padding: 8px 38px;
-    border-radius: 9999px;
+    padding: 8px 32px;
+    border-radius: 14px;
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -136,6 +137,7 @@ main::-webkit-scrollbar {
     align-items: center;
     border: 3px solid transparent;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .button-1 {
@@ -202,8 +204,8 @@ main::-webkit-scrollbar {
 }
 
 .project-card {
-    border: 1px solid var(--light);
+    border: 1px solid var(--accent);
     padding: 20px;
     border-radius: 16px;
-    background-color: var(--card-bg-color);
+    background-color: var(--accent-transparency);
 }

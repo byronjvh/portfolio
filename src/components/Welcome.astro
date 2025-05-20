@@ -24,16 +24,16 @@ import Section from "./Section.astro";
 					precisión.
 				</p>
 			</div>
-			<div class="flex gap-2 items-center">
-				<ButtonLink url="" className="button-1">
+			<div class="flex gap-3 items-center">
+				<ButtonLink url="" className="button-1 flex-1">
 					<GitHub size="18" /> Ver GitHub
 				</ButtonLink>
-				<ButtonLink url="" className="button-2"
+				<ButtonLink url="" className="button-2 flex-1"
 					><Linkedin size="18" /> Conectar</ButtonLink
 				>
-				<ButtonLink url="" className="button-3"
+				<ButtonLink url="" className="button-3 flex-1"
 					><Resume className="icon" size="22" />
-					<span>Descargar CV</span>
+					<span class="text-nowrap">Descargar CV</span>
 					<DownloadArrow className="button-3-arrow" />
 				</ButtonLink>
 			</div>
@@ -51,7 +51,7 @@ import Section from "./Section.astro";
 	>
 		<h2 class="text-xl">Proyectos</h2>
 		<div class="relative">
-			<div class="projects flex gap-24 overflow-x-scroll px-12">
+			<div class="projects flex gap-20 overflow-x-scroll px-10">
 				<div class="project-card shrink-0 w-full flex flex-col gap-4">
 					<img
 						src="https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg"
@@ -66,11 +66,11 @@ import Section from "./Section.astro";
 							con React, Tailwind y SQLite.
 						</p>
 					</div>
-					<div class="flex gap-2">
-						<ButtonLink className="button-1 text-sm"
+					<div class="flex gap-3">
+						<ButtonLink className="button-1 text-sm flex-1"
 							>Ver Código</ButtonLink
 						>
-						<ButtonLink className="button-2 text-sm"
+						<ButtonLink className="button-3 text-sm flex-1"
 							>Visitar Página</ButtonLink
 						>
 					</div>
@@ -85,11 +85,11 @@ import Section from "./Section.astro";
 				</div>
 			</div>
 			<button
-				class="absolute cursor-pointer h-16 w-10 left-0 top-1/2 -translate-y-1/2 flex items-center justify-center"
+				class="absolute cursor-pointer h-16 left-0 top-1/2 -translate-y-1/2 flex items-center justify-center"
 				><Arrow className="rotate-90" size="32" /></button
 			>
 			<button
-				class="absolute cursor-pointer h-16 w-10 right-0 top-1/2 -translate-y-1/2 flex items-center justify-center"
+				class="absolute cursor-pointer h-16 right-0 top-1/2 -translate-y-1/2 flex items-center justify-center"
 				><Arrow className="-rotate-90" size="32" /></button
 			>
 		</div>
