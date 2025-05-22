@@ -7,6 +7,8 @@ import DownloadArrow from "./icons/DownloadArrow.astro";
 import GitHub from "./icons/GitHub.astro";
 import Linkedin from "./icons/Linkedin.astro";
 import Resume from "./icons/Resume.astro";
+import RightArrow from "./icons/RightArrow.astro";
+import Web from "./icons/Web.astro";
 import Section from "./Section.astro";
 ---
 
@@ -67,12 +69,14 @@ import Section from "./Section.astro";
 						</p>
 					</div>
 					<div class="flex gap-3">
-						<ButtonLink className="button-1 text-sm flex-1"
-							>Ver Código</ButtonLink
+						<ButtonLink className="button-1 flex-1">
+							<GitHub size="18" />Ver Código</ButtonLink
 						>
-						<ButtonLink className="button-3 text-sm flex-1"
-							>Visitar Página</ButtonLink
-						>
+						<ButtonLink className="button-3 flex-1">
+							<Web className="icon" size="22" />
+							<span>Visitar Página</span>
+							<RightArrow className="button-3-arrow" />
+						</ButtonLink>
 					</div>
 				</div>
 				<div class="project-card shrink-0 w-full">
