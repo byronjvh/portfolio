@@ -168,14 +168,14 @@ main::-webkit-scrollbar {
 
 .button-3-arrow {
     position: absolute;
-    left: 200px;
+    left: 100%;
     top: 50%;
     height: 100%;
     width: max-content;
-    transform: translate(-4px, -50%);
-    border-radius: 50%;
+    transform: translate(-30%, -50%);
+    border-radius: 50% 0 0 50%;
     background-color: #fff4;
-    padding: 4px;
+    padding: 6px;
     transition: transform .2s ease-out;
 }
 
