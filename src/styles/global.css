@@ -99,7 +99,7 @@ main::-webkit-scrollbar {
 
 .nav-link {
     color: var(--title-color);
-    transition: text-shadow .3s ease-out;
+    transition: text-shadow .2s ease-out;
     font-family: var(--font-title);
 }
 
