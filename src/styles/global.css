@@ -39,6 +39,11 @@ h3 {
     font-weight: bold;
 }
 
+h2,
+h3 {
+    font-size: 36px;
+}
+
 
 .skills-list {
     display: grid;
