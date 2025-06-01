@@ -2,6 +2,7 @@
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import ButtonLink from "./ButtonLink.astro";
+import CodeBlock from "./CodeBlock.astro";
 import Arrow from "./icons/Arrow.astro";
 import DownloadArrow from "./icons/DownloadArrow.astro";
 import GitHub from "./icons/GitHub.astro";
@@ -103,10 +104,20 @@ import Section from "./Section.astro";
 	<!-- About Section -->
 	<Section id="about" className="about flex-col justify-center items-start">
 		<h2>Sobre mí</h2>
-		<p>
+		<p class="mb-4">
 			Desarrollador web enfocado en el Front End. Me gusta construir
 			interfaces limpias, intuitivas y centradas en el usuario.
 		</p>
+		<CodeBlock
+			code={`
+  const Byron = {
+    stack: ["React", "Tailwind", "Astro"],
+    estilo: "pixel-perfect",
+    hobbies: ["experimentar", "romper cosas", "arreglarlas mejor"],
+    objetivo: "Crear experiencias web inolvidables",
+  }
+	`}
+		/>
 	</Section>
 
 	<!-- Skills Section -->

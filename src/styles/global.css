@@ -9,13 +9,14 @@ body {
     --scroll-bg-color: #1b3a63;
     --light: #fff;
     --bg-color: #001F38;
-    --card-bg-color: #122d44;
+    --alt-bg-color: #001828;
     --p-color: #e2ded7;
     --title-color: #ffffff;
     --accent: #004aaa;
     --accent-transparency: #004aaa33;
     --accent2: #0b73d4;
     --accent3: #DB9F1F;
+    --accent4: #3dd6b5;
     --accent2-gradient: linear-gradient(65deg, rgba(11, 115, 212, 1) 8%, rgba(147, 197, 245, 1) 45%, rgba(11, 115, 212, 1) 65%, rgba(0, 91, 183, 1) 100%);
 
     --font-title: 'Outfit', sans-serif;
@@ -213,4 +214,33 @@ main::-webkit-scrollbar {
     padding: 20px;
     border-radius: 16px;
     background-color: var(--accent-transparency);
+}
+
+code {
+    border: 1px solid var(--accent);
+    background-color: var(--alt-bg-color);
+    font-family: 'Ubuntu Mono', monospace;
+    display: block;
+    color: #57B3FF;
+    font-size: 18px;
+}
+
+code span {
+    line-height: 1.8;
+}
+
+.hljs-string {
+    color: #FFF176;
+}
+
+.hljs-title {
+    color: #69F0AE;
+}
+
+.hljs-attr {
+    color: #00EFFF;
+}
+
+.hljs-keyword {
+    color: #7CA8FF;
 }
