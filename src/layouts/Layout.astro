@@ -15,14 +15,24 @@ import Nav from "../components/Nav.astro";
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
 		<link
-			href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Outfit:wght@100..900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Outfit:wght@100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
+		/> -->
 	</head>
 	<body>
 		<slot />
 		<Nav />
+		<script type="module" is:client>
+			import hljs from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/+esm";
+
+			window.addEventListener("DOMContentLoaded", () => {
+				hljs.highlightAll();
+			});
+		</script>
 	</body>
 </html>

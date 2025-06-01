@@ -1,0 +1,9 @@
+---
+interface Props {
+    code: string;
+    lang?: string;
+}
+const { code, lang = "js" } = Astro.props;
+---
+
+<pre><code class={`language-${lang} rounded-lg`} set:html={code} /></pre>
