@@ -55,19 +55,24 @@ import Section from "./Section.astro";
 		<h2 class="">Proyectos</h2>
 		<div class="relative w-full">
 			<div class="projects flex gap-20 overflow-x-scroll px-10">
-				<div class="project-card shrink-0 w-full flex flex-col gap-4">
+				<div class="project-card shrink-0 w-full flex flex-col gap-6">
 					<img
 						src="https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg"
 						alt="proyecto"
 						class="h-[280px] w-full object-cover rounded-lg"
 					/>
 					<div>
-						<h4 class="">TaskFlow App</h4>
-						<p>
+						<h4 class="font-bold text-lg">TaskFlow App</h4>
+						<p class="mb-2">
 							Una app de gestión de tareas por equipos con
 							autenticación y persistencia de datos. Construida
 							con React, Tailwind y SQLite.
 						</p>
+						<span class="tag">ReactJS</span>
+						<span class="tag">Tailwind</span>
+						<span class="tag">JavaScript</span>
+						<span class="tag">HTML</span>
+						<span class="tag">CSS</span>
 					</div>
 					<div class="flex gap-3">
 						<ButtonLink className="button-1 flex-1">
@@ -79,15 +84,6 @@ import Section from "./Section.astro";
 							<RightArrow className="button-3-arrow" />
 						</ButtonLink>
 					</div>
-				</div>
-				<div class="project-card shrink-0 w-full">
-					<h4>Portafolio Personal</h4>
-					<p>
-						Desarrollador web especializado en Front End. Disfruto
-						crear interfaces modernas, claras y funcionales, con
-						código ordenado y enfoque en la experiencia del usuario.
-					</p>
-					<button>Ver más</button>
 				</div>
 			</div>
 			<button

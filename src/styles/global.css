@@ -34,7 +34,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     color: var(--title-color);
     font-family: var(--font-title);
     font-weight: bold;
@@ -243,4 +244,13 @@ code span {
 
 .hljs-keyword {
     color: #7CA8FF;
+}
+
+.tag {
+    font-size: 14px;
+    padding: 3px 4px;
+    background-color: #4db2f5b2;
+    font-weight: 700;
+    border-radius: 6px;
+    color: #fff
 }
