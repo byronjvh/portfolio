@@ -2,4 +2,4 @@
 const { className, url } = Astro.props;
 ---
 
-<a href={url} class=`button ${className}`><slot /></a>
+<a href={url} class={`button text-nowrap ${className}`}><slot /></a>

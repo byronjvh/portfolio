@@ -134,7 +134,6 @@ main::-webkit-scrollbar {
 
 .button {
     position: relative;
-    padding: 8px 32px;
     border-radius: 14px;
     display: flex;
     justify-content: center;
@@ -201,18 +200,9 @@ main::-webkit-scrollbar {
     transform: translate(-34px, -50%);
 }
 
-.projects {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.projects::-webkit-scrollbar {
-    display: none;
-}
-
 .project-card {
     border: 1px solid var(--accent);
-    padding: 20px;
+    padding: 16px;
     border-radius: 16px;
     background-color: var(--accent-transparency);
 }

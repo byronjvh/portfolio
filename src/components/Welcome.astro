@@ -2,6 +2,7 @@
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import ButtonLink from "./ButtonLink.astro";
+import Card from "./Card.astro";
 import CodeBlock from "./CodeBlock.astro";
 import Arrow from "./icons/Arrow.astro";
 import DownloadArrow from "./icons/DownloadArrow.astro";
@@ -28,13 +29,13 @@ import Section from "./Section.astro";
 				</p>
 			</div>
 			<div class="flex gap-3 items-center">
-				<ButtonLink url="" className="button-1 flex-1">
+				<ButtonLink url="" className="button-1 flex-1 py-2 px-8">
 					<GitHub size="18" /> Ver GitHub
 				</ButtonLink>
-				<ButtonLink url="" className="button-2 flex-1"
+				<ButtonLink url="" className="button-2 flex-1 py-2 px-8"
 					><Linkedin size="18" /> Conectar</ButtonLink
 				>
-				<ButtonLink url="" className="button-3 flex-1"
+				<ButtonLink url="" className="button-3 flex-1 py-2 px-8"
 					><Resume className="icon" size="22" />
 					<span class="text-nowrap">Descargar CV</span>
 					<DownloadArrow className="button-3-arrow" />
@@ -54,46 +55,18 @@ import Section from "./Section.astro";
 	>
 		<h2 class="">Proyectos</h2>
 		<div class="relative w-full">
-			<div class="projects flex gap-20 overflow-x-scroll px-10">
-				<div class="project-card shrink-0 w-full flex flex-col gap-6">
-					<img
-						src="https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg"
-						alt="proyecto"
-						class="h-[280px] w-full object-cover rounded-lg"
-					/>
-					<div>
-						<h4 class="font-bold text-lg">TaskFlow App</h4>
-						<p class="mb-2">
-							Una app de gestión de tareas por equipos con
-							autenticación y persistencia de datos. Construida
-							con React, Tailwind y SQLite.
-						</p>
-						<span class="tag">ReactJS</span>
-						<span class="tag">Tailwind</span>
-						<span class="tag">JavaScript</span>
-						<span class="tag">HTML</span>
-						<span class="tag">CSS</span>
-					</div>
-					<div class="flex gap-3">
-						<ButtonLink className="button-1 flex-1">
-							<GitHub size="18" />Ver Código</ButtonLink
-						>
-						<ButtonLink className="button-3 flex-1">
-							<Web className="icon" size="22" />
-							<span>Visitar Página</span>
-							<RightArrow className="button-3-arrow" />
-						</ButtonLink>
-					</div>
-				</div>
+			<div class="projects flex flex-wrap gap-4">
+				<Card className="w-[300px]" />
+				<Card
+					className="w-[280px]"
+					description="Una app de gestión de tareas por equipos"
+				/>
+				<Card
+					className="w-[280px]"
+					description="Una app de gestión de tareas por equipos"
+				/>
+				<Card className="w-[300px]" />
 			</div>
-			<button
-				class="absolute cursor-pointer h-16 left-0 top-1/2 -translate-y-1/2 flex items-center justify-center"
-				><Arrow className="rotate-90" size="32" /></button
-			>
-			<button
-				class="absolute cursor-pointer h-16 right-0 top-1/2 -translate-y-1/2 flex items-center justify-center"
-				><Arrow className="-rotate-90" size="32" /></button
-			>
 		</div>
 	</Section>
 

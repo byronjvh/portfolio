@@ -1,0 +1,39 @@
+---
+import ButtonLink from "./ButtonLink.astro";
+import GitHub from "./icons/GitHub.astro";
+import RightArrow from "./icons/RightArrow.astro";
+import Web from "./icons/Web.astro";
+
+const {
+    img = "https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg",
+    title = "TaskFlow App",
+    description = "Una app de gestión de tareas por equipos con autenticación y persistencia de datos.",
+    tags = ["ReactJS", "Tailwind"],
+    code = "",
+    project = "",
+    className = "",
+} = Astro.props;
+---
+
+<div class={`project-card flex gap-4 ${className}`}>
+    <div class="h-[100px] aspect-square">
+        <img src={img} alt="proyecto" class="h-full object-cover rounded-lg" />
+    </div>
+    <div class="">
+        <h4 class="font-bold text-lg">{title}</h4>
+        <p class="mb-2">
+            {description}
+        </p>
+        {tags?.map((tag: string) => <span class="tag">{tag}</span>)}
+        <!-- <div class="flex gap-2 mt-4">
+            <ButtonLink className="button-1 flex-1 py-1 px-0" url={code}>
+                <GitHub size="18" />Ver Código</ButtonLink
+            >
+            <ButtonLink className="button-3 flex-1 py-1 px-0" url={project}>
+                <Web className="icon" size="22" />
+                <span>Visitar Página</span>
+                <RightArrow className="button-3-arrow" />
+            </ButtonLink>
+        </div> -->
+    </div>
+</div>
