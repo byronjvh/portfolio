@@ -15,25 +15,33 @@ const {
 } = Astro.props;
 ---
 
-<div class={`project-card flex gap-4 ${className}`}>
-    <div class="h-[100px] aspect-square">
-        <img src={img} alt="proyecto" class="h-full object-cover rounded-lg" />
+<div class={`project-card ${className}`}>
+    <div class="flex gap-4">
+        <div class="h-[80px] aspect-square">
+            <img
+                src={img}
+                alt="proyecto"
+                class="h-full object-cover rounded-lg"
+            />
+        </div>
+        <div class="">
+            <h4 class="font-bold text-base">{title}</h4>
+            <p class="mb-2 text-sm">
+                {description}
+            </p>
+            <div class="flex gap-1">
+                {tags?.map((tag: string) => <span class="tag">{tag}</span>)}
+            </div>
+        </div>
     </div>
-    <div class="">
-        <h4 class="font-bold text-lg">{title}</h4>
-        <p class="mb-2">
-            {description}
-        </p>
-        {tags?.map((tag: string) => <span class="tag">{tag}</span>)}
-        <!-- <div class="flex gap-2 mt-4">
-            <ButtonLink className="button-1 flex-1 py-1 px-0" url={code}>
-                <GitHub size="18" />Ver Código</ButtonLink
-            >
-            <ButtonLink className="button-3 flex-1 py-1 px-0" url={project}>
-                <Web className="icon" size="22" />
-                <span>Visitar Página</span>
-                <RightArrow className="button-3-arrow" />
-            </ButtonLink>
-        </div> -->
-    </div>
+    <!-- <div class="flex gap-2 mt-4">
+        <ButtonLink className="button-1 flex-1 py-1 px-0" url={code}>
+            <GitHub size="18" />Ver Código</ButtonLink
+        >
+        <ButtonLink className="button-3 flex-1 py-1 px-0" url={project}>
+            <Web className="icon" size="22" />
+            <span>Visitar Página</span>
+            <RightArrow className="button-3-arrow" />
+        </ButtonLink>
+    </div> -->
 </div>

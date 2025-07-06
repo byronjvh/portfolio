@@ -55,17 +55,22 @@ import Section from "./Section.astro";
 	>
 		<h2 class="">Proyectos</h2>
 		<div class="relative w-full">
-			<div class="projects flex flex-wrap gap-4">
-				<Card className="w-[300px]" />
+			<div class="projects flex flex-wrap items-start gap-6">
+				<Card className="flex-1 w-full" />
 				<Card
-					className="w-[280px]"
+					className="w-[250px] shrink-0"
 					description="Una app de gestión de tareas por equipos"
 				/>
 				<Card
-					className="w-[280px]"
+					className="w-[250px]"
 					description="Una app de gestión de tareas por equipos"
 				/>
-				<Card className="w-[300px]" />
+				<Card className="flex-1 w-full" />
+				<Card className="flex-1 w-full" />
+				<Card
+					className="w-[250px]"
+					description="Una app de gestión de tareas por equipos"
+				/>
 			</div>
 		</div>
 	</Section>
@@ -80,11 +85,17 @@ import Section from "./Section.astro";
 		<CodeBlock
 			code={`
   const Byron = {
-    stack: ["React", "Tailwind", "Astro"],
-    estilo: "pixel-perfect",
-    hobbies: ["experimentar", "romper cosas", "arreglarlas mejor"],
-    objetivo: "Crear experiencias web inolvidables",
+    perfil: "Frontend Developer que ama el diseño limpio, el código
+			 legible y los cafés bien amargos.",
+    stack: ["JavaScript", "React", "Next.js", "Astro", "Tailwind"],
+	herramientas: ["Git", "GitHub", "Figma", "Vercel", "Agile"],
+	superpoderes: [
+		"Si algo se mueve 1px, me doy cuenta",
+		"Aprender rápido",
+		"Trabajo en equipo"
+	],
   }
+  console.log('¡Hola! Aquí tienes un vistazo rápido sobre mí:', Byron);
 	`}
 		/>
 	</Section>

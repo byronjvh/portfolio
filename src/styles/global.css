@@ -43,7 +43,7 @@ h4 {
 
 h2,
 h3 {
-    font-size: 36px;
+    font-size: 48px;
 }
 
 
@@ -237,9 +237,9 @@ code span {
 }
 
 .tag {
-    font-size: 14px;
+    font-size: 12px;
     padding: 3px 4px;
-    background-color: #4db2f5b2;
+    background-color: #00d4b177;
     font-weight: 700;
     border-radius: 6px;
     color: #fff
