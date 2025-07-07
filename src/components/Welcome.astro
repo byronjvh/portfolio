@@ -18,7 +18,7 @@ import Section from "./Section.astro";
 	id="container"
 	class="overflow-y-scroll scroll-smooth snap-y max-h-svh pr-10"
 >
-	<Section id="home" className="">
+	<Section id="home" className="pl-2">
 		<div class="flex flex-col gap-7 text-balance">
 			<div class="flex flex-col gap-4">
 				<h1 class="text-8xl -translate-x-1">Byron Vargas Hernández</h1>
@@ -51,7 +51,7 @@ import Section from "./Section.astro";
 
 	<Section
 		id="projects"
-		className="flex-col justify-center items-center gap-4"
+		className="flex-col justify-center items-center gap-4 pl-2"
 	>
 		<h2 class="">Proyectos</h2>
 		<div class="relative w-full">
@@ -76,12 +76,10 @@ import Section from "./Section.astro";
 	</Section>
 
 	<!-- About Section -->
-	<Section id="about" className="about flex-col justify-center items-start">
-		<h2>Sobre mí</h2>
-		<p class="mb-4">
-			Desarrollador web enfocado en el Front End. Me gusta construir
-			interfaces limpias, intuitivas y centradas en el usuario.
-		</p>
+	<Section
+		id="about"
+		className="about flex-col justify-center items-start pl-2"
+	>
 		<CodeBlock
 			code={`
   const Byron = {
@@ -90,12 +88,14 @@ import Section from "./Section.astro";
     stack: ["JavaScript", "React", "Next.js", "Astro", "Tailwind"],
 	herramientas: ["Git", "GitHub", "Figma", "Vercel", "Agile"],
 	superpoderes: [
-		"Si algo se mueve 1px, me doy cuenta",
-		"Aprender rápido",
-		"Trabajo en equipo"
+		"👀 Si algo se mueve 1px, me doy cuenta",
+    	"⚡ Aprender rápido",
+    	"🤝 Trabajo en equipo"
 	],
+	mision: "Ayudar a convertir ideas en realidad digital."
   }
-  console.log('¡Hola! Aquí tienes un vistazo rápido sobre mí:', Byron);
+
+  console.log("🚀 Ejecutando perfil:", Byron);
 	`}
 		/>
 	</Section>
