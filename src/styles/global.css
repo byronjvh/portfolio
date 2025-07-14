@@ -8,12 +8,12 @@
 body {
     --scroll-bg-color: #1b3a63;
     --light: #fff;
-    --bg-color: #001F38;
+    --bg-color: #000f2b;
     --alt-bg-color: #001828;
-    --p-color: #e2ded7;
+    --p-color: #e0dbd5;
     --title-color: #ffffff;
     --accent: #004aaa;
-    --accent-transparency: #004aaa33;
+    --card-bg: #07204e;
     --accent2: #0b73d4;
     --accent3: #DB9F1F;
     --accent4: #3dd6b5;
@@ -200,11 +200,31 @@ main::-webkit-scrollbar {
     transform: translate(-34px, -50%);
 }
 
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+}
+
 .project-card {
-    border: 1px solid var(--accent);
     padding: 16px;
     border-radius: 16px;
-    background-color: var(--accent-transparency);
+    background-color: var(--card-bg);
+}
+
+.card2 {
+    grid-column: span 2 / span 2;
+}
+
+.card3 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+}
+
+.card4 {
+    grid-column-start: 3;
+    grid-row-start: 2;
 }
 
 .codeblock {
@@ -310,7 +330,7 @@ code span {
 .tag {
     font-size: 12px;
     padding: 3px 4px;
-    background-color: #00d4b177;
+    background-color: var(--accent2);
     font-weight: 700;
     border-radius: 6px;
     color: #fff

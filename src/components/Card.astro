@@ -7,7 +7,7 @@ import Web from "./icons/Web.astro";
 const {
     img = "https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg",
     title = "TaskFlow App",
-    description = "Una app de gestión de tareas por equipos con autenticación y persistencia de datos.",
+    description = "",
     tags = ["ReactJS", "Tailwind"],
     code = "",
     project = "",
@@ -24,12 +24,11 @@ const {
                 class="h-full object-cover rounded-lg"
             />
         </div>
-        <div class="">
-            <h4 class="font-bold text-base">{title}</h4>
-            <p class="mb-2 text-sm">
-                {description}
-            </p>
-            <div class="flex gap-1">
+        <div class="flex flex-col gap-2">
+            <h4 class="font-bold text-2xl">{title}</h4>
+            {description ? <p class="">{description}</p> : ""}
+
+            <div class="mt-1 flex gap-1">
                 {tags?.map((tag: string) => <span class="tag">{tag}</span>)}
             </div>
         </div>
