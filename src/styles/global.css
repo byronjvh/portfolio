@@ -8,12 +8,12 @@
 body {
     --scroll-bg-color: #1b3a63;
     --light: #fff;
-    --bg-color: #000f2b;
+    --bg-color: #0b1018;
     --alt-bg-color: #001828;
     --p-color: #e0dbd5;
     --title-color: #ffffff;
     --accent: #004aaa;
-    --card-bg: #07204e;
+    --card-bg: #061a2c;
     --accent2: #0b73d4;
     --accent3: #DB9F1F;
     --accent4: #3dd6b5;
@@ -204,13 +204,16 @@ main::-webkit-scrollbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 16px;
+    /* gap: 16px; */
 }
 
 .project-card {
-    padding: 16px;
-    border-radius: 16px;
-    background-color: var(--card-bg);
+    padding: 20px;
+    /* border-radius: 8px; */
+    /* background-color: var(--card-bg); */
+    /* box-shadow: 0px 10px 6px 3px rgba(0, 0, 0, 0.1); */
+    border: 1px solid var(--scroll-bg-color);
+
 }
 
 .card2 {
