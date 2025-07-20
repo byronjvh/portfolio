@@ -16,7 +16,7 @@ const {
 ---
 
 <div class={`project-card card flex gap-4 ${className}`}>
-    <img src={img} alt="proyecto" class="h-full object-cover" />
+    <slot />
 
     <div class="flex flex-col gap-2 text">
         <h4 class="font-bold text-xl">{title}</h4>

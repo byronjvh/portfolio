@@ -8,6 +8,7 @@ import Arrow from "./icons/Arrow.astro";
 import DownloadArrow from "./icons/DownloadArrow.astro";
 import GitHub from "./icons/GitHub.astro";
 import Linkedin from "./icons/Linkedin.astro";
+import Popix from "./icons/Popix.astro";
 import Resume from "./icons/Resume.astro";
 import RightArrow from "./icons/RightArrow.astro";
 import Web from "./icons/Web.astro";
@@ -24,8 +25,11 @@ import Section from "./Section.astro";
 				<h1 class="text-8xl -translate-x-1">Byron Vargas Hernández</h1>
 				<p class="text-lg leading-6">
 					Desarrollo soluciones digitales que mejoran la experiencia
-					del usuario y marcan la diferencia, combinando innovación y
-					precisión.
+					del usuario y marcan la <span class="text-highlight"
+						>diferencia</span
+					>, combinando
+					<span class="text-highlight">innovación</span> y
+					<span class="text-highlight">precisión</span>.
 				</p>
 			</div>
 			<div class="flex gap-3 items-center">
@@ -56,7 +60,6 @@ import Section from "./Section.astro";
 		<h2 class="">Proyectos</h2>
 		<div class="relative w-full">
 			<div class="projects">
-				<Card className="card1" />
 				<Card
 					className="card2"
 					title="Popix"
@@ -69,7 +72,10 @@ import Section from "./Section.astro";
 					title="4Imagenes1Palabra"
 					img="src/assets/4i1p.png"
 					description="Juego: adivina la palabra a partir de las cuatro imágenes"
-				/>
+				>
+					<Popix />
+				</Card>
+				<Card className="card1" />
 				<Card className="card4" />
 			</div>
 		</div>

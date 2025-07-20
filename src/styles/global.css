@@ -8,12 +8,13 @@
 body {
     --scroll-bg-color: #1b3a63;
     --light: #fff;
-    --bg-color: #0b1018;
+    --bg-color: #0f1520;
     --alt-bg-color: #001828;
-    --p-color: #e0dbd5;
+    --p-color: #e0dfdc;
     --title-color: #ffffff;
-    --accent: #004aaa;
-    --card-bg: #061a2c;
+    --p-color-highlight: #ffeb7c;
+    --accent: #;
+    --card-bg: #151e2e;
     --accent2: #0b73d4;
     --accent3: #DB9F1F;
     --accent4: #3dd6b5;
@@ -22,6 +23,7 @@ body {
 
     --font-title: 'Outfit', sans-serif;
     --font-p: "Maven Pro", sans-serif;
+    --font-code: 'Ubuntu Mono', monospace;
 
     font-family: var(--font-p);
     margin: 0 auto;
@@ -47,6 +49,13 @@ h3 {
     font-size: 48px;
 }
 
+h1 {
+    font-weight: 800;
+}
+
+.text-highlight {
+    color: var(--p-color-highlight);
+}
 
 .skills-list {
     display: grid;
@@ -202,68 +211,59 @@ main::-webkit-scrollbar {
 }
 
 .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, max-content);
 }
 
 .project-card {
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 16px 16px;
     border: 1px solid var(--border-color);
-    width: 500px;
-    transform: translateX(-10%);
     cursor: pointer;
-    transition: border .2s ease-out, transform .2s ease-out;
+    transition: border .2s ease-out;
+    background-color: var(--card-bg);
+    border-radius: 6px;
 }
+
+/* .card1 {
+    grid-row: span 2 / span 2;
+}
+
+.card2 {
+    grid-row: span 2 / span 2;
+} */
+
+/* .card3 {
+    grid-row-start: 3;
+}
+
+.card4 {
+    grid-row-start: 3;
+} */
 
 .project-card img {
-    aspect-ratio: 15 / 12;
-    max-width: 150px;
+    width: 100%;
+    max-height: 200px;
     object-fit: cover;
     object-position: center;
-}
-
-.project-card .text {
-    padding-left: 16px;
-    border-left: 1px solid var(--border-color);
-}
-
-.project-card:nth-child(even) .text {
-    padding: unset;
-    padding-right: 16px;
-    border: unset;
-    border-right: 1px solid var(--border-color);
-    text-align: right;
-    align-items: end;
-}
-
-.project-card:nth-child(even) {
-    justify-content: end;
-    transform: translateX(10%);
-}
-
-.project-card:nth-child(even) img {
-    order: 2;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 .project-card:hover {
     border: 1px solid var(--accent);
-    align-self: center;
-    transform: translateX(0%);
 }
 
-.card2 .text {}
-
-.card3 {}
-
-.card4 {}
 
 .codeblock {
     border: 1px solid var(--accent);
     border-radius: 12px;
     background-color: var(--alt-bg-color);
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: var(--font-code);
     display: block;
     color: #57B3FF;
     font-size: 16px;
@@ -361,9 +361,18 @@ code span {
 
 .tag {
     font-size: 12px;
-    padding: 3px 4px;
+    padding: 2px 6px;
     background-color: var(--accent2);
     font-weight: 700;
     border-radius: 6px;
-    color: #fff
+    color: #fff;
+    border-radius: 9999px;
+}
+
+.icon-color1 {
+    color: #5e92d6;
+}
+
+.icon-color2 {
+    color: var(--p-color-highlight);
 }
