@@ -14,12 +14,12 @@ body {
     --title-color: #ffffff;
     --p-color-highlight: #ffeb7c;
     --accent: #004aaa;
-    --card-bg: #151e2e;
+    --card-bg: #131c2c;
     --accent2: #0b73d4;
     --accent3: #DB9F1F;
     --accent4: #3dd6b5;
     --accent2-gradient: linear-gradient(65deg, rgba(11, 115, 212, 1) 8%, rgba(147, 197, 245, 1) 45%, rgba(11, 115, 212, 1) 65%, rgba(0, 91, 183, 1) 100%);
-    --border-color: #5f738d;
+    --border-color: #30445c;
 
     --font-title: 'Outfit', sans-serif;
     --font-p: "Maven Pro", sans-serif;
