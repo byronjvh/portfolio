@@ -1,6 +1,4 @@
 ---
-import astroLogo from "../assets/astro.svg";
-import background from "../assets/background.svg";
 import ButtonLink from "./ButtonLink.astro";
 import Card from "./Card.astro";
 import CodeBlock from "./CodeBlock.astro";
@@ -9,9 +7,8 @@ import DownloadArrow from "./icons/DownloadArrow.astro";
 import GitHub from "./icons/GitHub.astro";
 import Linkedin from "./icons/Linkedin.astro";
 import Popix from "./icons/Popix.astro";
+import Fourimg from "./icons/Fourimg.astro";
 import Resume from "./icons/Resume.astro";
-import RightArrow from "./icons/RightArrow.astro";
-import Web from "./icons/Web.astro";
 import Section from "./Section.astro";
 ---
 
@@ -33,13 +30,13 @@ import Section from "./Section.astro";
 				</p>
 			</div>
 			<div class="flex gap-3 items-center">
-				<ButtonLink url="" className="button-1 flex-1 py-2 px-8">
+				<ButtonLink url="" className="button-1 flex-1 py-1 px-8">
 					<GitHub size="18" /> Ver GitHub
 				</ButtonLink>
-				<ButtonLink url="" className="button-2 flex-1 py-2 px-8"
+				<ButtonLink url="" className="button-2 flex-1 py-1 px-8"
 					><Linkedin size="18" /> Conectar</ButtonLink
 				>
-				<ButtonLink url="" className="button-3 flex-1 py-2 px-8"
+				<ButtonLink url="" className="button-3 flex-1 py-1 px-8"
 					><Resume className="icon" size="22" />
 					<span class="text-nowrap">Descargar CV</span>
 					<DownloadArrow className="button-3-arrow" />
@@ -55,9 +52,13 @@ import Section from "./Section.astro";
 
 	<Section
 		id="projects"
-		className="flex-col justify-center items-center gap-4 pl-2"
+		className="flex-col justify-center items-start gap-4 pl-2"
 	>
-		<h2 class="">Proyectos</h2>
+		<h2 class="">Mi trabajo</h2>
+		<p>
+			Proyectos creados con precisión y propósito para ofrecer
+			experiencias inolvidables.
+		</p>
 		<div class="relative w-full">
 			<div class="projects">
 				<Card
@@ -65,18 +66,28 @@ import Section from "./Section.astro";
 					title="Popix"
 					img="src/assets/popix.png"
 					description="Editor de imágenes, rápido, online y gratis"
-					tags={["ReactJS", "Tailwind", "HTMLCanvas"]}
-				/>
+					tags={[
+						["ReactJS", "blue"],
+						["Tailwind", "sky"],
+						["HTMLCanvas", "orange"],
+					]}
+				>
+					<div class="h-24 flex items-end">
+						<Fourimg size="90" />
+					</div>
+				</Card>
 				<Card
 					className="card3"
 					title="4Imagenes1Palabra"
 					img="src/assets/4i1p.png"
 					description="Juego: adivina la palabra a partir de las cuatro imágenes"
 				>
-					<Popix />
+					<div class="h-24 flex items-end">
+						<Popix size="88" />
+					</div>
 				</Card>
-				<Card className="card1" />
-				<Card className="card4" />
+				<Card className="card1" title="Texto de ejemplo" />
+				<Card className="card4" title="Texto de ejemplo" />
 			</div>
 		</div>
 	</Section>

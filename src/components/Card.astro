@@ -5,10 +5,14 @@ import RightArrow from "./icons/RightArrow.astro";
 import Web from "./icons/Web.astro";
 
 const {
-    img = "https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg",
+    img = "",
     title = "TaskFlow App",
     description = "",
-    tags = ["ReactJS", "Tailwind"],
+    tags = [
+        ["ReactJS", "blue"],
+        ["Tailwind", "Sky"],
+    ],
+    withicon = false,
     code = "",
     project = "",
     className = "",
@@ -18,23 +22,24 @@ const {
 <div class={`project-card card flex gap-4 ${className}`}>
     <slot />
 
-    <div class="flex flex-col gap-2 text">
+    <div class=`flex flex-col gap-2 text`>
         <h4 class="font-bold text-xl">{title}</h4>
         {description ? <p class="">{description}</p> : ""}
 
         <div class="mt-1 flex gap-1">
-            {tags?.map((tag: string) => <span class="tag">{tag}</span>)}
+            {
+                tags?.map((tag: string) => (
+                    <span class={`tag ${tag[1]}`}>{tag[0]}</span>
+                ))
+            }
         </div>
     </div>
 
-    <!-- <div class="flex gap-2 mt-4">
-        <ButtonLink className="button-1 flex-1 py-1 px-0" url={code}>
-            <GitHub size="18" />Ver Código</ButtonLink
-        >
-        <ButtonLink className="button-3 flex-1 py-1 px-0" url={project}>
-            <Web className="icon" size="22" />
-            <span>Visitar Página</span>
-            <RightArrow className="button-3-arrow" />
-        </ButtonLink>
-    </div> -->
+    {
+        img && (
+            <ButtonLink url="" className="button-4 text-sm flex-1 py-1 px-6">
+                <GitHub size="18" /> Ver GitHub
+            </ButtonLink>
+        )
+    }
 </div>

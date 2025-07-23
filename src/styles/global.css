@@ -10,16 +10,16 @@ body {
     --light: #fff;
     --bg-color: #0f1520;
     --alt-bg-color: #001828;
-    --p-color: #e0dfdc;
-    --title-color: #ffffff;
+    --p-color: #dbdad3;
+    --title-color: #fffef5;
     --p-color-highlight: #ffeb7c;
     --accent: #004aaa;
-    --card-bg: #131c2c;
+    --card-bg: #1c2638;
     --accent2: #0b73d4;
     --accent3: #DB9F1F;
     --accent4: #3dd6b5;
     --accent2-gradient: linear-gradient(65deg, rgba(11, 115, 212, 1) 8%, rgba(147, 197, 245, 1) 45%, rgba(11, 115, 212, 1) 65%, rgba(0, 91, 183, 1) 100%);
-    --border-color: #30445c;
+    --border-color: #355781;
 
     --font-title: 'Outfit', sans-serif;
     --font-p: "Maven Pro", sans-serif;
@@ -144,7 +144,7 @@ main::-webkit-scrollbar {
 
 .button {
     position: relative;
-    border-radius: 14px;
+    border-radius: 99999px;
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -179,6 +179,12 @@ main::-webkit-scrollbar {
 
 .button-3 {
     background-color: var(--accent3);
+    overflow: hidden;
+}
+
+.button-4 {
+    background-color: var(--p-color-highlight);
+    color: var(--bg-color);
     overflow: hidden;
 }
 
@@ -221,13 +227,15 @@ main::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 16px 16px;
-    border: 1px solid var(--border-color);
+    gap: 28px;
+    padding: 20px 16px;
+    border: 1.5px solid var(--border-color);
     cursor: pointer;
     transition: border .2s ease-out;
     background-color: var(--card-bg);
     border-radius: 6px;
 }
+
 
 /* .card1 {
     grid-row: span 2 / span 2;
@@ -255,7 +263,7 @@ main::-webkit-scrollbar {
 }
 
 .project-card:hover {
-    border: 1px solid var(--accent);
+    border: 1.5px solid var(--accent);
 }
 
 
@@ -360,13 +368,28 @@ code span {
 }
 
 .tag {
-    font-size: 12px;
+    font-size: 10px;
     padding: 2px 6px;
     background-color: var(--accent2);
     font-weight: 700;
     border-radius: 6px;
     color: #fff;
     border-radius: 9999px;
+}
+
+.tag.blue {
+    background-color: #0e139b;
+    color: #dddeff;
+}
+
+.tag.sky {
+    background-color: #2374ae;
+    color: #dff2ff;
+}
+
+.tag.orange {
+    background-color: #a25916;
+    color: #fff0e2;
 }
 
 .icon-color1 {
