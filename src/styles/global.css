@@ -10,7 +10,7 @@ body {
     --light: #fff;
     --bg-color: #0f1520;
     --alt-bg-color: #001828;
-    --p-color: #dbdad3;
+    --p-color: #dbdad7;
     --title-color: #fffef5;
     --p-color-highlight: #ffeb7c;
     --accent: #004aaa;
@@ -379,17 +379,17 @@ code span {
 
 .tag.blue {
     background-color: #0e139b;
-    color: #dddeff;
+    color: #f6f6ff;
 }
 
 .tag.sky {
     background-color: #2374ae;
-    color: #dff2ff;
+    color: #f6fbff;
 }
 
 .tag.orange {
     background-color: #a25916;
-    color: #fff0e2;
+    color: #fffaf5;
 }
 
 .icon-color1 {
@@ -398,4 +398,11 @@ code span {
 
 .icon-color2 {
     color: var(--p-color-highlight);
+}
+
+.link-underline {
+    position: absolute;
+    color: var(--p-color-highlight);
+    left: 0;
+    bottom: 0;
 }

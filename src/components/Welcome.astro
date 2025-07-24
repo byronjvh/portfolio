@@ -10,6 +10,7 @@ import Popix from "./icons/Popix.astro";
 import Fourimg from "./icons/Fourimg.astro";
 import Resume from "./icons/Resume.astro";
 import Section from "./Section.astro";
+import LinkUnderline from "./icons/LinkUnderline.astro";
 ---
 
 <main
@@ -52,13 +53,15 @@ import Section from "./Section.astro";
 
 	<Section
 		id="projects"
-		className="flex-col justify-center items-start gap-4 pl-2"
+		className="flex-col justify-center items-start gap-6 pl-2"
 	>
-		<h2 class="">Mi trabajo</h2>
-		<p>
-			Proyectos creados con precisión y propósito para ofrecer
-			experiencias inolvidables.
-		</p>
+		<div class="flex flex-col w-full items-center text-center">
+			<h2 class="leading-15">Mi trabajo</h2>
+			<p class="max-w-[450px]">
+				Proyectos creados con precisión y propósito para ofrecer
+				experiencias inolvidables.
+			</p>
+		</div>
 		<div class="relative w-full">
 			<div class="projects">
 				<Card
@@ -89,6 +92,10 @@ import Section from "./Section.astro";
 				<Card className="card1" title="Texto de ejemplo" />
 				<Card className="card4" title="Texto de ejemplo" />
 			</div>
+		</div>
+		<div class="link relative">
+			<p class="pb-0.5 text-sm font-medium">Visitar Web</p>
+			<LinkUnderline className="link-underline" />
 		</div>
 	</Section>
 
