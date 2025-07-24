@@ -15,7 +15,7 @@ body {
     --p-color-highlight: #ffeb7c;
     --accent: #004aaa;
     --card-bg: #1c2638;
-    --accent2: #0b73d4;
+    --accent2: #1a86e5;
     --accent3: #DB9F1F;
     --accent4: #3dd6b5;
     --accent2-gradient: linear-gradient(65deg, rgba(11, 115, 212, 1) 8%, rgba(147, 197, 245, 1) 45%, rgba(11, 115, 212, 1) 65%, rgba(0, 91, 183, 1) 100%);
@@ -400,9 +400,36 @@ code span {
     color: var(--p-color-highlight);
 }
 
+.link {
+    position: relative;
+    width: auto;
+    color: var(--title-color);
+}
+
 .link-underline {
     position: absolute;
-    color: var(--p-color-highlight);
+    color: var(--title-color);
     left: 0;
     bottom: 0;
+}
+
+.link-underline.over {
+    position: absolute;
+    color: #1a86e5;
+}
+
+.link .mask {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 0px;
+    overflow: hidden;
+    transition: width .2s ease-out;
+    interpolate-size: allow-keywords;
+    z-index: 10;
+}
+
+.link:hover .mask {
+    width: 100%;
 }

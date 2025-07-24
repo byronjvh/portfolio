@@ -1,0 +1,13 @@
+---
+import LinkUnderline from "./icons/LinkUnderline.astro";
+
+const { title = "Visitar Web", url = "#" } = Astro.props;
+---
+
+<a href={url} class="link cursor-pointer">
+    <p class="pb-0.5 pr-6 text-sm font-medium">{title}</p>
+    <LinkUnderline className="link-underline" />
+    <div class="mask">
+        <LinkUnderline className="link-underline over" />
+    </div>
+</a>
