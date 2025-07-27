@@ -2,12 +2,13 @@
 import LinkUnderline from "./icons/LinkUnderline.astro";
 
 const { title = "Visitar Web", url = "#" } = Astro.props;
+const size = title.length >= 12 ? "lg" : "m";
 ---
 
 <a href={url} class="link cursor-pointer">
     <p class="pb-0.5 pr-6 text-sm font-medium">{title}</p>
-    <LinkUnderline className="link-underline" />
+    <LinkUnderline className="link-underline" size={size} />
     <div class="mask">
-        <LinkUnderline className="link-underline over" />
+        <LinkUnderline className="link-underline over" size={size} />
     </div>
 </a>
