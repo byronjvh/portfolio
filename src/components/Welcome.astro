@@ -1,5 +1,5 @@
 ---
-import ButtonLink from "./ButtonLink.astro";
+import Button from "./Button.astro";
 import Card from "./Card.astro";
 import CodeBlock from "./CodeBlock.astro";
 import Arrow from "./icons/Arrow.astro";
@@ -10,7 +10,7 @@ import Popix from "./icons/Popix.astro";
 import Fourimg from "./icons/Fourimg.astro";
 import Resume from "./icons/Resume.astro";
 import Section from "./Section.astro";
-import LinkUnderline from "./icons/LinkUnderline.astro";
+import Link from "./Link.astro";
 ---
 
 <main
@@ -30,18 +30,14 @@ import LinkUnderline from "./icons/LinkUnderline.astro";
 					<span class="text-highlight">precisión</span>.
 				</p>
 			</div>
-			<div class="flex gap-3 items-center">
-				<ButtonLink url="" className="button-1 flex-1 py-1 px-8">
+			<div class="flex gap-4 items-center">
+				<Button url="" className="button-1">
 					<GitHub size="18" /> Ver GitHub
-				</ButtonLink>
-				<ButtonLink url="" className="button-2 flex-1 py-1 px-8"
-					><Linkedin size="18" /> Conectar</ButtonLink
+				</Button>
+				<Button url="" className="button-2"
+					><Linkedin size="18" /> Conectar</Button
 				>
-				<ButtonLink url="" className="button-3 flex-1 py-1 px-8"
-					><Resume className="icon" size="22" />
-					<span class="text-nowrap">Descargar CV</span>
-					<DownloadArrow className="button-3-arrow" />
-				</ButtonLink>
+				<Link title="Descargar CV" />
 			</div>
 		</div>
 		<span

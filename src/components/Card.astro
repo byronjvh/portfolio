@@ -1,5 +1,5 @@
 ---
-import ButtonLink from "./ButtonLink.astro";
+import Button from "./Button.astro";
 import GitHub from "./icons/GitHub.astro";
 import RightArrow from "./icons/RightArrow.astro";
 import Web from "./icons/Web.astro";
@@ -39,12 +39,9 @@ const {
     {
         img && (
             <div class="flex gap-3 items-center">
-                <ButtonLink
-                    url=""
-                    className="button-4 text-sm flex-1 py-1 px-6"
-                >
+                <Button url="" className="button-1">
                     <GitHub size="18" /> Ver GitHub
-                </ButtonLink>
+                </Button>
                 <Link />
             </div>
         )
