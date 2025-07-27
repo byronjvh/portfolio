@@ -9,4 +9,6 @@ const { code, lang = "js" } = Astro.props;
 ---
 
 <pre
-    class="w-full codeblock"><div class="code-header"><div class="mac-buttons" /><h4>Sobre mí <span class="code-cross"><Cross className="cross-icon" rotate="45" size="18" /></span> </h4><Cross className="plus-icon" rotate="0" size="18" /></div><code class={`language-${lang} `} set:html={code} /></pre>
+    id="codeBlock"
+    class="w-full codeblock relative"><div class="code-header"><div class="mac-buttons" /><h4>Sobre mí <span class="code-cross"><Cross className="cross-icon" rotate="45" size="18" /></span> </h4><Cross className="plus-icon" rotate="0" size="18" /></div><code class={`language-${lang} `} set:html={code} />
+<div class="typing-effect" id="typing-effect" /></pre>

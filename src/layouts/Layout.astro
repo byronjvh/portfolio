@@ -24,11 +24,35 @@ import Nav from "../components/Nav.astro";
 		<slot />
 		<Nav />
 		<script type="module" is:client>
+			// Codeblock
 			import hljs from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/+esm";
 
 			window.addEventListener("DOMContentLoaded", () => {
 				hljs.highlightAll();
 			});
+
+			//Typing effect
+			const typingEffect = document.getElementById("typing-effect");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							typingEffect?.classList.add("visible");
+							console.log(
+								"Elemento visible en pantalla:",
+								entry.target,
+							);
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{
+					threshold: 0.9,
+				},
+			);
+
+			const codeBlock = document.getElementById("codeBlock");
+			if (codeBlock) observer.observe(codeBlock);
 		</script>
 	</body>
 </html>

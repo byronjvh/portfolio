@@ -433,3 +433,24 @@ code span {
 .link:hover .mask {
     width: 100%;
 }
+
+.typing-effect {
+    position: absolute;
+    right: 195px;
+    bottom: 25px;
+    font-size: 17px;
+    width: 29ch;
+    height: 25px;
+    background-color: var(--alt-bg-color);
+    pointer-events: none;
+}
+
+.typing-effect.visible {
+    animation: typing 3s steps(28, end) forwards;
+}
+
+@keyframes typing {
+    to {
+        width: 0px;
+    }
+}
