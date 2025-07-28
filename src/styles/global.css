@@ -157,8 +157,8 @@ main::-webkit-scrollbar {
     color: var(--title-color);
     gap: 6px;
     cursor: pointer;
-    min-width: 144px;
-    height: 34px;
+    min-width: 150px;
+    height: 40px;
 }
 
 .button-1 {
@@ -174,7 +174,7 @@ main::-webkit-scrollbar {
 .button-2 {
     background: var(--accent2-gradient);
     background-size: 250% 115%;
-    background-position: -250px -3px;
+    background-position: -150px -3px;
     transition: background .3s ease-out;
 }
 
@@ -446,10 +446,26 @@ code span {
 }
 
 .typing-effect.visible {
-    animation: typing 3s steps(28, end) forwards;
+    animation: typing-2 3s steps(28, end) forwards;
+}
+
+.hero-typing {
+    display: inline-block;
+    vertical-align: bottom;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    width: 0;
+    overflow: hidden;
+    animation: typing 2.5s steps(34, end) forwards;
 }
 
 @keyframes typing {
+    to {
+        width: 291px;
+    }
+}
+
+@keyframes typing-2 {
     to {
         width: 0px;
     }
