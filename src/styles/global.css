@@ -16,13 +16,12 @@ body {
     --alt-bg-color: #001828;
     --p-color: #dbdad7;
     --title-color: #fffef5;
-    --p-color-highlight: #ffeb7c;
-    --accent: #004aaa;
+    --accent: #ffeb7c;
     --card-bg: #1c2638;
     --accent2: #1a86e5;
     --accent3: #DB9F1F;
     --accent4: #3dd6b5;
-    --accent2-gradient: linear-gradient(65deg, rgba(11, 115, 212, 1) 8%, rgba(147, 197, 245, 1) 45%, rgba(11, 115, 212, 1) 65%, rgba(0, 91, 183, 1) 100%);
+    --accent2-gradient: linear-gradient(90deg, rgba(20, 106, 219, 1) 0%, rgba(20, 106, 219, 1) 50%, rgba(26, 134, 229, 1) 50%, rgba(26, 134, 229, 1) 100%);
     --border-color: #355781;
 
     --font-title: 'Outfit', sans-serif;
@@ -58,7 +57,7 @@ h1 {
 }
 
 .text-highlight {
-    color: var(--p-color-highlight);
+    color: var(--accent);
 }
 
 .skills-list {
@@ -85,6 +84,7 @@ main {
     /* Para Firefox */
     -ms-overflow-style: none;
     /* Para Internet Explorer y Edge antiguos */
+
 }
 
 main::-webkit-scrollbar {
@@ -162,58 +162,26 @@ main::-webkit-scrollbar {
 }
 
 .button-1 {
-    background-color: var(--p-color-highlight);
+    background-color: var(--accent);
     color: var(--bg-color);
     overflow: hidden;
+    border: 2px solid transparent;
+    transition: background .2s ease-out, border .2s ease-out, color .2s ease-out;
 }
 
 .button-1:hover {
     background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
 }
 
 .button-2 {
-    background: var(--accent2-gradient);
-    background-size: 250% 115%;
-    background-position: -150px -3px;
-    transition: background .3s ease-out;
+    background: var(--accent2);
+    transition: filter .1s ease-out;
 }
 
 .button-2:hover {
-    background-position: -3px -3px;
-}
-
-.button-3 {
-    background-color: var(--accent3);
-    overflow: hidden;
-}
-
-
-.button-3-arrow {
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    height: 100%;
-    width: max-content;
-    transform: translate(-30%, -50%);
-    border-radius: 50% 0 0 50%;
-    background-color: #fff4;
-    padding: 6px;
-    transition: transform .2s ease-out;
-}
-
-.button-3 span,
-.button-3 .icon {
-    transform: translateX(0);
-    transition: transform .2s ease-out;
-}
-
-.button-3:hover span,
-.button-3:hover .icon {
-    transform: translateX(-16px);
-}
-
-.button-3:hover .button-3-arrow {
-    transform: translate(-34px, -50%);
+    filter: brightness(1.2);
 }
 
 .projects {
@@ -221,9 +189,12 @@ main::-webkit-scrollbar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, max-content);
+
 }
 
 .project-card {
+    view-timeline: --card block 80% auto;
+    animation-timeline: --card;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -237,21 +208,15 @@ main::-webkit-scrollbar {
 }
 
 
-/* .card1 {
-    grid-row: span 2 / span 2;
+.card1,
+.card3 {
+    animation-name: scroll-show;
 }
 
-.card2 {
-    grid-row: span 2 / span 2;
-} */
-
-/* .card3 {
-    grid-row-start: 3;
-}
-
+.card2,
 .card4 {
-    grid-row-start: 3;
-} */
+    animation-name: scroll-show2;
+}
 
 .project-card img {
     width: 100%;
@@ -263,12 +228,12 @@ main::-webkit-scrollbar {
 }
 
 .project-card:hover {
-    border: 1.5px solid var(--accent);
+    border: 1.5px solid var(--accent2);
 }
 
 
 .codeblock {
-    border: 1px solid var(--accent);
+    border: 1px solid var(--accent2);
     border-radius: 12px;
     background-color: var(--alt-bg-color);
     font-family: var(--font-code);
@@ -316,7 +281,7 @@ main::-webkit-scrollbar {
     gap: 8px;
     background: var(--bg-color);
     padding: 0 12px;
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent2);
     color: var(--p-color);
 }
 
@@ -326,7 +291,7 @@ main::-webkit-scrollbar {
     font-weight: normal;
     background-color: var(--alt-bg-color);
     border-width: 0 1px 0 1px;
-    border-color: var(--accent);
+    border-color: var(--accent2);
     position: relative;
 }
 
@@ -397,7 +362,7 @@ code span {
 }
 
 .icon-color2 {
-    color: var(--p-color-highlight);
+    color: var(--accent);
 }
 
 .link {
@@ -495,5 +460,33 @@ code span {
 
     100% {
         height: 0%;
+    }
+}
+
+@keyframes scroll-show {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+        scale: 80%;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        scale: 100%;
+    }
+}
+
+@keyframes scroll-show2 {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+        scale: 80%;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        scale: 100%;
     }
 }
