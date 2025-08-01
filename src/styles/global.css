@@ -14,6 +14,7 @@ body {
     --light: #fff;
     --bg-color: #0f1520;
     --bg-hexagon-lines: #273349;
+    --bg-hexagon-light: #fff1a2;
     --alt-bg-color: #001828;
     --p-color: #dbdad7;
     --title-color: #fffef5;
@@ -177,7 +178,7 @@ main::-webkit-scrollbar {
 
 .button-2 {
     background: var(--accent2);
-    transition: filter .1s ease-out;
+    transition: filter .2s ease-out;
 }
 
 .button-2:hover {
@@ -467,7 +468,7 @@ code span {
     from {
         opacity: 0;
         transform: translateY(50%);
-        scale: 80%;
+        scale: 60%;
     }
 
     to {
@@ -517,7 +518,7 @@ code span {
     left: 0;
     border-radius: 50%;
     filter: blur(50px);
-    background-color: var(--light);
+    background-color: var(--bg-hexagon-light);
     z-index: -5;
-    transition: transform 3s linear;
+    transition: transform 4s linear;
 }
