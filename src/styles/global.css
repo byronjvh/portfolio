@@ -13,6 +13,7 @@ body {
     --scroll-bg-color: #1b3a63;
     --light: #fff;
     --bg-color: #0f1520;
+    --bg-hexagon-lines: #273349;
     --alt-bg-color: #001828;
     --p-color: #dbdad7;
     --title-color: #fffef5;
@@ -20,7 +21,6 @@ body {
     --card-bg: #1c2638;
     --accent2: #1a86e5;
     --accent3: #DB9F1F;
-    --accent4: #3dd6b5;
     --accent2-gradient: linear-gradient(90deg, rgba(20, 106, 219, 1) 0%, rgba(20, 106, 219, 1) 50%, rgba(26, 134, 229, 1) 50%, rgba(26, 134, 229, 1) 100%);
     --border-color: #355781;
 
@@ -36,6 +36,7 @@ body {
     background-color: var(--bg-color);
     color: var(--p-color);
     display: flex;
+    overflow: hidden;
 }
 
 h1,
@@ -84,7 +85,6 @@ main {
     /* Para Firefox */
     -ms-overflow-style: none;
     /* Para Internet Explorer y Edge antiguos */
-
 }
 
 main::-webkit-scrollbar {
@@ -489,4 +489,35 @@ code span {
         transform: translateY(0%);
         scale: 100%;
     }
+}
+
+.background-effect {
+    position: absolute;
+    background: var(--bg-hexagon-lines);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2102px;
+    height: 1302px;
+    max-width: 2102px;
+    max-height: 1302px;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.background-effect-hexagon {
+    color: var(--bg-color);
+}
+
+.background-effect-ball {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    filter: blur(50px);
+    background-color: var(--light);
+    z-index: -5;
+    transition: transform 3s linear;
 }
