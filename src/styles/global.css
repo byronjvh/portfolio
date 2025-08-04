@@ -13,13 +13,13 @@ body {
     --scroll-bg-color: #1b3a63;
     --light: #fff;
     --bg-color: #0f1520;
-    --bg-hexagon-lines: #273349;
+    --bg-hexagon-lines: #2b313d;
     --bg-hexagon-light: #fff1a2;
     --alt-bg-color: #001828;
     --p-color: #dbdad7;
     --title-color: #fffef5;
     --accent: #ffeb7c;
-    --card-bg: #1c2638;
+    --card-bg: #1b2538d8;
     --accent2: #1a86e5;
     --accent3: #DB9F1F;
     --accent2-gradient: linear-gradient(90deg, rgba(20, 106, 219, 1) 0%, rgba(20, 106, 219, 1) 50%, rgba(26, 134, 229, 1) 50%, rgba(26, 134, 229, 1) 100%);
@@ -494,31 +494,37 @@ code span {
 
 .background-effect {
     position: absolute;
-    background: var(--bg-hexagon-lines);
+    /* background: var(--bg-hexagon-lines); */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 2102px;
-    height: 1302px;
-    max-width: 2102px;
-    max-height: 1302px;
+    width: 2090px;
+    height: 1290px;
+    max-width: 2090px;
+    max-height: 1290px;
     overflow: hidden;
     z-index: -10;
+
 }
 
 .background-effect-hexagon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: var(--bg-color);
+    z-index: -5;
 }
 
 .background-effect-ball {
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 50%;
-    filter: blur(50px);
+    filter: blur(100px);
     background-color: var(--bg-hexagon-light);
     z-index: -5;
-    transition: transform 4s linear;
+    transition: transform 2s linear;
 }
