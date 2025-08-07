@@ -23,7 +23,7 @@ body {
     --accent2: #1a86e5;
     --accent3: #DB9F1F;
     --accent2-gradient: linear-gradient(90deg, rgba(20, 106, 219, 1) 0%, rgba(20, 106, 219, 1) 50%, rgba(26, 134, 229, 1) 50%, rgba(26, 134, 229, 1) 100%);
-    --border-color: #355781;
+    --border-color: #0a5291;
 
     --font-title: 'Outfit', sans-serif;
     --font-p: "Maven Pro", sans-serif;
@@ -62,22 +62,6 @@ h1 {
     color: var(--accent);
 }
 
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.75rem;
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.skills-list li {
-    background: #e5e5e5;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    font-weight: 500;
-}
 
 main {
     overflow: scroll;
@@ -527,4 +511,16 @@ code span {
     background-color: var(--bg-hexagon-light);
     z-index: -5;
     transition: transform 2s linear;
+}
+
+.skills {
+    color: var(--title-color);
+    font-family: var(--font-code);
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+.course {
+    background-color: var(--bg-color);
+    border: 1px solid var(--accent2);
 }

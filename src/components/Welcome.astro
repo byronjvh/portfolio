@@ -11,12 +11,10 @@ import Fourimg from "./icons/Fourimg.astro";
 import Resume from "./icons/Resume.astro";
 import Section from "./Section.astro";
 import Link from "./Link.astro";
+import GridList from "./GridList.astro";
 ---
 
-<main
-	id="container"
-	class="overflow-y-scroll scroll-smooth snap-y max-h-svh pr-10"
->
+<main id="container" class="overflow-y-scroll scroll-smooth max-h-svh pr-10">
 	<Section id="home" className="pl-2">
 		<div class="flex flex-col gap-7">
 			<div class="flex flex-col gap-4">
@@ -121,21 +119,56 @@ import Link from "./Link.astro";
 	</Section>
 
 	<!-- Skills Section -->
-	<Section id="skills" className="flex-col justify-center items-start">
-		<h2>Tecnologías</h2>
-		<p>
-			Me especializo en Desarrollo Web Front End con tecnologías modernas,
-			pero también exploro el Back End para tener una visión completa.
-		</p>
-		<ul class="skills-list">
-			<li>React</li>
-			<li>JavaScript</li>
-			<li>Tailwind CSS</li>
-			<li>Next.js</li>
-			<li>TypeScript</li>
-			<li>SQLite / Node (aprendiendo)</li>
-		</ul>
-		<section class="">
+	<Section id="skills" className="flex-col justify-center items-start gap-4">
+		<div>
+			<h2>Tecnologías</h2>
+			<p>
+				Me especializo en crear interfaces web modernas y pensadas para
+				el usuario. Cuido los detalles, combinando diseño, rendimiento y
+				buenas prácticas.
+			</p>
+		</div>
+		<div class="skills p-6 rounded-lg w-full flex flex-col gap-1">
+			{"> skills --list"}
+			<GridList
+				icon="✔️"
+				items={[
+					"React",
+					"JavaScript",
+					"TypeScript",
+					"Next JS",
+					"Astro",
+					"MySQL",
+					"Git",
+					"Tailwind",
+					"HTML",
+					"CSS",
+				]}
+			/>
+		</div>
+		<div>
+			<h2>Educación</h2>
+			<div class="flex flex-col gap-4">
+				<div class="p-3.5 flex flex-col gap-0.5 rounded-lg course">
+					<h4>🎓 Computer Science</h4>
+					<p class="text-sm">Universidad Fidélitas · 2027</p>
+					<p class="text-xs opacity-70">
+						Carrera universitaria enfocada en fundamentos de
+						programación, estructuras de datos, bases de datos y
+						sistemas informáticos.
+					</p>
+				</div>
+				<div class="p-3.5 flex flex-col gap-0.5 rounded-lg course">
+					<h4>💻 Especialización en Diseño y Desarrollo Web</h4>
+					<p class="text-sm">Universidad Fidélitas · 2025</p>
+					<p class="text-xs opacity-70">
+						Formación práctica en Bootstrap, JavaScript, JQuery,
+						MySQL, AJAX, PHP y Wordpress.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- <section class="">
 			<h2>Estudios</h2>
 			<div class="experience-card">
 				<h3>Curso de Desarrollo Web</h3>
@@ -152,7 +185,7 @@ import Link from "./Link.astro";
 					personales, desde clones de apps hasta herramientas útiles.
 				</p>
 			</div>
-		</section>
+		</section> -->
 	</Section>
 
 	<!-- Contact Section -->
