@@ -12,6 +12,7 @@ import Resume from "./icons/Resume.astro";
 import Section from "./Section.astro";
 import Link from "./Link.astro";
 import GridList from "./GridList.astro";
+import Cap from "./icons/Cap.astro";
 ---
 
 <main id="container" class="overflow-y-scroll scroll-smooth max-h-svh pr-10">
@@ -122,7 +123,7 @@ import GridList from "./GridList.astro";
 	<Section id="skills" className="flex-col justify-center items-start gap-4">
 		<div>
 			<h2>Tecnologías</h2>
-			<p>
+			<p class="text-balance">
 				Me especializo en crear interfaces web modernas y pensadas para
 				el usuario. Cuido los detalles, combinando diseño, rendimiento y
 				buenas prácticas.
@@ -148,9 +149,11 @@ import GridList from "./GridList.astro";
 		</div>
 		<div>
 			<h2>Educación</h2>
-			<div class="flex flex-col gap-4">
+			<div class="flex flex-col gap-5 mt-1">
 				<div class="p-3.5 flex flex-col gap-0.5 rounded-lg course">
-					<h4>🎓 Computer Science</h4>
+					<h4 class="flex items-center gap-1">
+						<span><Cap size="18" /></span> Computer Science
+					</h4>
 					<p class="text-sm">Universidad Fidélitas · 2027</p>
 					<p class="text-xs opacity-70">
 						Carrera universitaria enfocada en fundamentos de
