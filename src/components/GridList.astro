@@ -1,0 +1,16 @@
+---
+const { icon, className, items = ["React", "Javascript"] } = Astro.props;
+---
+
+<ul class=`grid grid-cols-3 ${className}`>
+    {
+        items.map((el: string) => (
+            <li class="">
+                <div class="flex items-center gap-2">
+                    <span class="pb-0.5">{icon}</span>
+                    <p>{el}</p>
+                </div>
+            </li>
+        ))
+    }
+</ul>
