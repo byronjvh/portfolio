@@ -2,4 +2,9 @@
 const { className, url } = Astro.props;
 ---
 
-<a href={url} class={`button text-nowrap ${className}`}><slot /></a>
+<a
+    href={url}
+    rel="noopener noreferer"
+    target="_blank"
+    class={`button text-nowrap ${className}`}><slot /></a
+>
