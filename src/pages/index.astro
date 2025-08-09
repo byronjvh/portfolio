@@ -1,4 +1,6 @@
 ---
+import BackgroundEffect from "../components/icons/BackgroundEffect.astro";
+import Nav from "../components/Nav.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
@@ -6,4 +8,59 @@ import "../styles/global.css";
 
 <Layout>
 	<Welcome />
+	<Nav />
+	<BackgroundEffect className="background-effect-hexagon" />
+	<div class="background-effect">
+		<span id="background-ball" class="background-effect-ball"></span>
+		<span id="background-ball2" class="background-effect-ball"></span>
+	</div>
+	<script type="module" is:client>
+		// Codeblock
+		import hljs from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/+esm";
+
+		window.addEventListener("DOMContentLoaded", () => {
+			hljs.highlightAll();
+		});
+
+		//Typing effect
+		const typingEffect = document.getElementById("typing-effect");
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						typingEffect?.classList.add("visible");
+						console.log(
+							"Elemento visible en pantalla:",
+							entry.target,
+						);
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.9,
+			},
+		);
+
+		const codeBlock = document.getElementById("codeBlock");
+		if (codeBlock) observer.observe(codeBlock);
+
+		//background effect
+		const ball = document.getElementById("background-ball");
+		const ball2 = document.getElementById("background-ball2");
+		ball.style.transform = `translateY(400px) translateX(600px)`;
+		ball2.style.transform = `translateY(100px) translateX(700px)`;
+		setInterval(() => {
+			const randomY = Math.floor(Math.random() * 1000);
+			const randomX = Math.floor(Math.random() * 700);
+			ball.style.transform = `translateY(${randomY}px) translateX(${randomX}px)`;
+
+			const randomY2 = Math.floor(Math.random() * 1000);
+			const randomX2 = Math.floor(Math.random() * 500) + 900;
+			ball2.style.transform = `translateY(${randomY2}px) translateX(${randomX2}px)`;
+			console.log({ randomY2, randomX2 });
+
+			console.log({ randomY, randomX });
+		}, 2000);
+	</script>
 </Layout>
