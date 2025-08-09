@@ -1,0 +1,99 @@
+---
+import Experience from "../components/CV/Experience.astro";
+import LinkCV from "../components/CV/LinkCV.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/CV.css";
+---
+
+<Layout title="CV - Byron Vargas Hernández">
+    <main class="flex flex-col gap-6">
+        <header>
+            <ul class="flex gap-8">
+                <li>
+                    <LinkCV
+                        url="mailto:byronjvh02@gmail.com"
+                        title="byronjvh02@gmail.com"
+                    />
+                </li>
+                <span>-</span>
+                <li>
+                    <LinkCV
+                        url="https://wa.me/+50672062036"
+                        title="+506 7206 2036"
+                    />
+                </li>
+                <span>-</span>
+                <li>
+                    <LinkCV
+                        url="https://linkedin.com/in/byronjvh"
+                        title="LinkedIn"
+                    />
+                </li>
+                <span>-</span>
+                <li>
+                    <LinkCV url="https://github.com/byronjvh" title="GitHub" />
+                </li>
+            </ul>
+        </header>
+        <section>
+            <h1>BYRON VARGAS HERNÁNDEZ</h1>
+            <h2>WEB DEVELOPER</h2>
+            <p>
+                Creative and adaptable Web Developer actively seeking
+                opportunities to contribute and grow in collaborative
+                environments. Known for the ability to learn quickly, work
+                effectively in teams, and lead projects to completion.
+                Passionate about creating valuable digital experiences through
+                innovative web solutions.
+            </p>
+        </section>
+        <section>
+            <h2>EXPERIENCE</h2>
+            <div class="flex flex-col gap-4">
+                <Experience
+                    title="CR Tech - Technology Sales Advisor and Desktop Support"
+                    date="June 2024 – Present"
+                    keys={[
+                        "Provided technology sales and technical support for desktop equipment, contributing to a 25% increase in store sales through effective team collaboration.",
+                        "Enhanced knowledge in desktop systems, general technology, customer communication, and service.",
+                        "Collaborated with team members to meet store targets and improve customer experience.",
+                    ]}
+                />
+                <Experience
+                    title="Popix - Online Image Editor"
+                    description="A free, online image editor built with React and Canvas, designed for easy, in-browser image enhancements and adjustments."
+                    url="https://github.com/byronjvh/PopixImageEditor"
+                    keys={[
+                        "Integrated editing tools for brightness, contrast, saturation, and blur.",
+                        "Developed a responsive, intuitive interface optimized for various devices.",
+                    ]}
+                />
+                <Experience
+                    title="4 Images 1 Word"
+                    description="A game built with React, where players guess the word from four images, offering an engaging challenge."
+                    url="https://github.com/byronjvh/4Imagenes1Palabra"
+                    keys={[
+                        "Created an interactive experience with React and enabled data sharing across components using global context.",
+                        "Integrated LocalStorage for game progress saving, ensuring a dynamic and responsive user experience.",
+                    ]}
+                />
+            </div>
+        </section>
+        <section>
+            <h2>EDUCATION</h2>
+            <p>
+                Computer Science - Fidelitas University (Expected graduation:
+                2026)
+            </p>
+            <p>San Pedro, San Jose, Costa Rica</p>
+        </section>
+        <section>
+            <h2>SKILLS</h2>
+            <p>
+                HTML | CSS | JavaScript | React | Leadership | Communication |
+                Teamwork | Problem Solving | Responsive Design | Git | SEO |
+                Nextjs | Frontend | API | Astro | GitHub | Adaptability
+            </p>
+        </section>
+    </main>
+</Layout>
