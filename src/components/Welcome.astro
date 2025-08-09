@@ -34,13 +34,14 @@ import Cap from "./icons/Cap.astro";
 				</p>
 			</div>
 			<div class="flex gap-3 items-center">
-				<Button url="" className="button-1">
+				<Button url="https://github.com/byronjvh" className="button-1">
 					<GitHub size="18" /> Ver GitHub
 				</Button>
-				<Button url="" className="button-2"
-					><Linkedin size="18" /> Conectar</Button
+				<Button
+					url="https://www.linkedin.com/in/byronjvh/"
+					className="button-2"><Linkedin size="18" /> Conectar</Button
 				>
-				<Link title="Descargar CV" />
+				<Link url="/CV" title="Descargar CV" />
 			</div>
 		</div>
 		<span
@@ -66,13 +67,16 @@ import Cap from "./icons/Cap.astro";
 				<Card
 					className="card1"
 					title="Popix Editor"
-					img="src/assets/popix.png"
 					description="🌅 Editor de imágenes, rápido, online y gratis."
 					tags={[
 						["ReactJS", "blue"],
 						["Tailwind", "sky"],
 						["HTMLCanvas", "orange"],
 					]}
+					,
+					isHighlight="true"
+					github="https://github.com/byronjvh/PopixImageEditor"
+					page="https://byronjvh.github.io/PopixImageEditor/"
 				>
 					<div class="h-24 pl-0.5 flex items-end">
 						<Popix size="80" />
@@ -81,8 +85,10 @@ import Cap from "./icons/Cap.astro";
 				<Card
 					className="card2"
 					title="4Imagenes1Palabra"
-					img="src/assets/4i1p.png"
 					description="🎮 Adivina la palabra a partir de las cuatro imágenes."
+					isHighlight="true"
+					github="https://github.com/byronjvh/4Imagenes1Palabra"
+					page="https://byronjvh.github.io/4Imagenes1Palabra/"
 				>
 					<div class="h-24 pl-0.5 w-max flex items-end">
 						<Fourimg size="80" />
@@ -94,7 +100,6 @@ import Cap from "./icons/Cap.astro";
 		</div>
 	</Section>
 
-	<!-- About Section -->
 	<Section
 		id="about"
 		className="about flex-col justify-center items-start pl-2"
@@ -120,7 +125,6 @@ import Cap from "./icons/Cap.astro";
 		/>
 	</Section>
 
-	<!-- Skills Section -->
 	<Section id="skills" className="flex-col justify-center items-start gap-4">
 		<div>
 			<h2>Tecnologías</h2>
@@ -153,7 +157,7 @@ import Cap from "./icons/Cap.astro";
 		<div class="education">
 			<h2>Educación</h2>
 			<div class="flex flex-col gap-5 mt-1">
-				<div
+				<article
 					class="p-3.5 flex flex-col gap-0.5 rounded-lg course course1"
 				>
 					<h4 class="flex items-center gap-1">
@@ -165,8 +169,8 @@ import Cap from "./icons/Cap.astro";
 						programación, estructuras de datos, bases de datos y
 						sistemas informáticos.
 					</p>
-				</div>
-				<div
+				</article>
+				<article
 					class="p-3.5 flex flex-col gap-0.5 rounded-lg course course2"
 				>
 					<h4>💻 Especialización en Diseño y Desarrollo Web</h4>
@@ -175,30 +179,11 @@ import Cap from "./icons/Cap.astro";
 						Formación práctica en Bootstrap, JavaScript, JQuery,
 						MySQL, AJAX, PHP y Wordpress.
 					</p>
-				</div>
+				</article>
 			</div>
 		</div>
-		<!-- <section class="">
-			<h2>Estudios</h2>
-			<div class="experience-card">
-				<h3>Curso de Desarrollo Web</h3>
-				<p>
-					Programa intensivo de formación en desarrollo web moderno,
-					centrado en tecnologías como React, Git, CSS y diseño
-					responsivo.
-				</p>
-			</div>
-			<div class="experience-card">
-				<h3>Proyectos autodidactas</h3>
-				<p>
-					Aprendizaje constante mediante la construcción de proyectos
-					personales, desde clones de apps hasta herramientas útiles.
-				</p>
-			</div>
-		</section> -->
 	</Section>
 
-	<!-- Contact Section -->
 	<Section id="contact" className="flex-col justify-center items-start">
 		<h2>Contacto</h2>
 		<p>
