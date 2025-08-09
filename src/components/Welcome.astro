@@ -74,8 +74,8 @@ import Cap from "./icons/Cap.astro";
 						["HTMLCanvas", "orange"],
 					]}
 				>
-					<div class="h-24 flex justify-start items-end">
-						<Fourimg size="80" />
+					<div class="h-24 pl-0.5 flex items-end">
+						<Popix size="80" />
 					</div>
 				</Card>
 				<Card
@@ -84,8 +84,8 @@ import Cap from "./icons/Cap.astro";
 					img="src/assets/4i1p.png"
 					description="🎮 Adivina la palabra a partir de las cuatro imágenes."
 				>
-					<div class="h-24 flex items-end">
-						<Popix size="80" />
+					<div class="h-24 pl-0.5 w-max flex items-end">
+						<Fourimg size="80" />
 					</div>
 				</Card>
 				<Card className="card3" title="Texto de ejemplo" />
@@ -103,15 +103,16 @@ import Cap from "./icons/Cap.astro";
 			code={`
   const Byron = {
     perfil: "Frontend Developer que ama el diseño limpio, el código
-			 legible y los cafés bien amargos.",
-    stack: ["JavaScript", "React", "Next.js", "Astro", "Tailwind"],
-	herramientas: ["Git", "GitHub", "Figma", "Vercel", "Agile"],
-	superpoderes: [
-		"👀 Si algo se mueve 1px, me doy cuenta",
-    	"⚡ Aprender rápido",
-    	"🤝 Trabajo en equipo"
+	        legible y los cafés bien amargos.",
+    tecnologias: [
+	  "JavaScript", "React", "Next.js", "Astro", "Tailwind", "MySQL"
 	],
-	mision: "Ayudar a convertir ideas en realidad digital."
+	superpoderes: [
+	  "👀 Si algo se mueve 1px, me doy cuenta",
+      "⚡ Aprender rápido",
+      "🤝 Trabajo en equipo"
+	],
+    mision: "Ayudar a convertir ideas en realidad digital."
   }
 
   console.log("🚀 Ejecutando perfil:", Byron);
@@ -144,13 +145,17 @@ import Cap from "./icons/Cap.astro";
 					"Tailwind",
 					"HTML",
 					"CSS",
+					"Figma",
+					"Agile",
 				]}
 			/>
 		</div>
-		<div>
+		<div class="education">
 			<h2>Educación</h2>
 			<div class="flex flex-col gap-5 mt-1">
-				<div class="p-3.5 flex flex-col gap-0.5 rounded-lg course">
+				<div
+					class="p-3.5 flex flex-col gap-0.5 rounded-lg course course1"
+				>
 					<h4 class="flex items-center gap-1">
 						<span><Cap size="18" /></span> Computer Science
 					</h4>
@@ -161,7 +166,9 @@ import Cap from "./icons/Cap.astro";
 						sistemas informáticos.
 					</p>
 				</div>
-				<div class="p-3.5 flex flex-col gap-0.5 rounded-lg course">
+				<div
+					class="p-3.5 flex flex-col gap-0.5 rounded-lg course course2"
+				>
 					<h4>💻 Especialización en Diseño y Desarrollo Web</h4>
 					<p class="text-sm">Universidad Fidélitas · 2025</p>
 					<p class="text-xs opacity-70">
