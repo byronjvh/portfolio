@@ -522,7 +522,7 @@ code span {
 }
 
 .course2 {
-    view-timeline: --course2 block 90% auto;
+    view-timeline: --course2 block 95% auto;
     animation-timeline: --course2;
     transform-origin: center right;
 }
