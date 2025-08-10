@@ -1,45 +1,48 @@
 ---
-import Education from "../components/CV/Education.astro";
-import Experience from "../components/CV/Experience.astro";
-import LinkCV from "../components/CV/LinkCV.astro";
-import SectionCV from "../components/CV/SectionCV.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/CV.css";
 ---
 
 <Layout title="CV - Byron Vargas Hernández">
-    <main class="flex flex-col gap-4 text-sky-900">
+    <main id="cv" class="">
         <header>
-            <ul
-                class="ml-4 flex flex-col gap-2 list-disc md:ml-0 md:list-none md:flex-row md:gap-6 text-sm"
-            >
+            <ul class="contact-list">
                 <li>
-                    <LinkCV
-                        url="https://wa.me/+50672062036"
-                        title="+506 7206 2036"
-                    />
+                    <a
+                        href="https://wa.me/+50672062036"
+                        target="_blank"
+                        rel="noopener noreferer">+506 7206 2036</a
+                    >
                 </li>
-                <span class="hidden md:inline">-</span>
+                <span class="separator">-</span>
                 <li>
-                    <LinkCV
-                        url="mailto:byronjvh02@gmail.com"
-                        title="byronjvh02@gmail.com"
-                    />
+                    <a
+                        href="mailto:byronjvh02@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferer">byronjvh02@gmail.com</a
+                    >
                 </li>
-                <span class="hidden md:inline">-</span>
+                <span class="separator">-</span>
                 <li>
-                    <LinkCV
-                        url="https://linkedin.com/in/byronjvh"
-                        title="LinkedIn"
-                    />
+                    <a
+                        href="https://linkedin.com/in/byronjvh"
+                        target="_blank"
+                        rel="noopener noreferer">LinkedIn</a
+                    >
                 </li>
-                <span class="hidden md:inline">-</span>
+                <span class="separator">-</span>
                 <li>
-                    <LinkCV url="https://github.com/byronjvh" title="GitHub" />
+                    <a
+                        href="https://github.com/byronjvh"
+                        target="_blank"
+                        rel="noopener noreferer">GitHub</a
+                    >
                 </li>
             </ul>
         </header>
-        <SectionCV title="BYRON VARGAS HERNÁNDEZ" subtitle="WEB DEVELOPER">
+        <section>
+            <h1 class="">BYRON VARGAS HERNÁNDEZ</h1>
+            <h2 class="">WEB DEVELOPER</h2>
             <p>
                 Creative and adaptable Web Developer seeking to contribute to a
                 collaborative team and drive innovative projects. A quick
@@ -47,54 +50,117 @@ import "../styles/CV.css";
                 ensure project completion. Passionate about crafting valuable
                 digital experiences through modern web solutions.
             </p>
-        </SectionCV>
-        <SectionCV subtitle="EXPERIENCE">
-            <div class="flex flex-col gap-4">
-                <Experience
-                    title="CR Tech - Technology Sales Advisor and Desktop Support"
-                    date="June 2024 – Present"
-                    keys={[
-                        "Drove a 25% increase in store sales by providing expert technology sales and technical support for desktop equipment in a highly collaborative team environment.",
-                        "Developed deep knowledge of desktop systems, general technology, and best practices for customer communication and service.",
-                        "Collaborated with team members to meet store targets and improve customer experience.",
-                    ]}
-                />
-                <Experience
-                    title="Popix - Online Image Editor"
-                    description="A free, online image editor built with React and Canvas, designed for easy, in-browser image enhancements and adjustments."
-                    year="2024"
-                    url="https://github.com/byronjvh/PopixImageEditor"
-                    keys={[
-                        "Integrated editing tools for brightness, contrast, saturation, and blur.",
-                        "Engineered core editing features including brightness, contrast, saturation, and blur adjustments.",
-                    ]}
-                />
-                <Experience
-                    title="4 Images 1 Word"
-                    description="A game built with React, where players guess the word from four images, offering an engaging challenge."
-                    year="2023"
-                    url="https://github.com/byronjvh/4Imagenes1Palabra"
-                    keys={[
-                        "Built a highly interactive user experience in React, utilizing the Context API for efficient global state management.",
-                        "Implemented LocalStorage to persist game progress, enhancing the dynamic and responsive user experience.",
-                    ]}
-                />
+        </section>
+        <section class="experience">
+            <h2 class="">EXPERIENCE</h2>
+            <div class="container">
+                <article class="">
+                    <h3>
+                        CR Tech - Technology Sales Advisor and Desktop Support
+                    </h3>
+                    <p class="">June 2024 – Present</p>
+                    <ul class="">
+                        <li>
+                            Drove a 25% increase in store sales by providing
+                            expert technology sales and technical support for
+                            desktop equipment in a highly collaborative team
+                            environment.
+                        </li>
+                        <li>
+                            Developed deep knowledge of desktop systems, general
+                            technology, and best practices for customer
+                            communication and service.
+                        </li>
+                        <li>
+                            Collaborated with team members to meet store targets
+                            and improve customer experience.
+                        </li>
+                    </ul>
+                </article>
+                <article class="">
+                    <div class="experience-header">
+                        <h3>Popix - Online Image Editor</h3>
+                        <p class="">2024</p>
+                    </div>
+
+                    <p>
+                        A free, online image editor built with React and Canvas,
+                        designed for easy, in-browser image enhancements and
+                        adjustments.
+                    </p>
+
+                    <a
+                        class=""
+                        href="https://github.com/byronjvh/PopixImageEditor"
+                        target="_blank"
+                        rel="noopener noreferer"
+                    >
+                        GitHub
+                    </a>
+
+                    <ul class="">
+                        <li>
+                            Integrated editing tools for brightness, contrast,
+                            saturation, and blur.
+                        </li>
+                        <li>
+                            Engineered core editing features including
+                            brightness, contrast, saturation, and blur
+                            adjustments.
+                        </li>
+                    </ul>
+                </article>
+                <article class="">
+                    <div class="experience-header">
+                        <h3>4 Images 1 Word</h3>
+                        <p class="">2023</p>
+                    </div>
+
+                    <p>
+                        A game built with React, where players guess the word
+                        from four images, offering an engaging challenge.
+                    </p>
+
+                    <a
+                        class=""
+                        href="https://github.com/byronjvh/4Imagenes1Palabra"
+                        target="_blank"
+                        rel="noopener noreferer"
+                    >
+                        GitHub
+                    </a>
+
+                    <ul class="">
+                        <li>
+                            Built a highly interactive user experience in React,
+                            utilizing the Context API for efficient global state
+                            management.
+                        </li>
+                        <li>
+                            Implemented LocalStorage to persist game progress,
+                            enhancing the dynamic and responsive user
+                            experience.
+                        </li>
+                    </ul>
+                </article>
             </div>
-        </SectionCV>
-        <SectionCV subtitle="EDUCATION">
-            <div class="flex flex-col gap-2">
-                <Education
-                    title="Computer Science"
-                    institute="Universidad Fidélitas · 2027"
-                />
-                <Education
-                    title="Specialization in Web Design and Development"
-                    institute="Universidad Fidélitas · 2025"
-                />
+        </section>
+        <section class="education">
+            <h2 class="">EDUCATION</h2>
+            <div class="container">
+                <article>
+                    <h3>Computer Science</h3>
+                    <p class="">Universidad Fidélitas · 2027</p>
+                </article>
+                <article>
+                    <h3>Specialization in Web Design and Development</h3>
+                    <p class="">Universidad Fidélitas · 2025</p>
+                </article>
             </div>
-        </SectionCV>
-        <SectionCV subtitle="SKILLS">
-            <ul class="list-disc pl-8">
+        </section>
+        <section class="skills">
+            <h2 class="">SKILLS</h2>
+            <ul class="">
                 <li>
                     <strong>Languages & Frameworks:</strong> HTML, CSS, JavaScript,
                     React, Next.js, Astro
@@ -103,16 +169,41 @@ import "../styles/CV.css";
                     <strong>Developer Tools:</strong> Git, GitHub, API, SEO, Testing,
                     Deploy
                 </li>
-                <li>
+                <li id="">
                     <strong>Core Competencies:</strong> Leadership, Communication,
                     Teamwork, Problem Solving, Responsive Design, Frontend, Adaptability,
                     Agile
                 </li>
             </ul>
-        </SectionCV>
+        </section>
     </main>
     <button
+        id="download"
         class="absolute right-1 top-2 font-bold text-sm px-4 rounded-full text-blue-900 bg-transparent border-2 border-blue-900 h-8 hover:bg-blue-900 hover:text-white transition-colors duration-200 cursor-pointer ease-out"
         >Download CV</button
     >
+
+    <script type="module" is:inline>
+        const btn = document.getElementById("download");
+        btn.addEventListener("click", () => {
+            const element = document.getElementById("cv");
+            html2pdf()
+                .from(document.getElementById("cv"))
+                .set({
+                    margin: [0.2, 0.605, 0.2, 0.605],
+                    filename: "mi-cv.pdf",
+                    image: { type: "jpeg", quality: 1 },
+                    html2canvas: {
+                        scale: 2,
+                        width: 695 + 5,
+                    },
+                    jsPDF: {
+                        unit: "in",
+                        format: "a4",
+                        orientation: "portrait",
+                    },
+                })
+                .save();
+        });
+    </script>
 </Layout>
