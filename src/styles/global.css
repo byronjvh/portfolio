@@ -185,7 +185,6 @@ main::-webkit-scrollbar {
     align-items: start;
     padding: 20px 16px;
     border: 1.5px solid var(--border-color);
-    cursor: pointer;
     transition: border .2s ease-out;
     background-color: var(--card-bg);
     border-radius: 6px;
