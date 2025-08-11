@@ -525,3 +525,21 @@ code span {
     animation-timeline: --course2;
     transform-origin: center right;
 }
+
+.contact-form {
+    font-family: var(--font-code);
+    color: var(--title-color);
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-form-symbol {
+    color: var(--p-color)
+}
+
+.contact-form-command {
+    color: var(--accent);
+}
