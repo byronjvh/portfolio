@@ -89,14 +89,16 @@ import "../styles/CV.css";
                         adjustments.
                     </p>
 
-                    <a
-                        class=""
-                        href="https://github.com/byronjvh/PopixImageEditor"
-                        target="_blank"
-                        rel="noopener noreferer"
-                    >
-                        GitHub
-                    </a>
+                    <span class="pdf-link">
+                        <a
+                            class=""
+                            href="https://github.com/byronjvh/PopixImageEditor"
+                            target="_blank"
+                            rel="noopener noreferer"
+                        >
+                            GitHub
+                        </a>
+                    </span>
 
                     <ul class="">
                         <li>
@@ -120,15 +122,16 @@ import "../styles/CV.css";
                         A game built with React, where players guess the word
                         from four images, offering an engaging challenge.
                     </p>
-
-                    <a
-                        class=""
-                        href="https://github.com/byronjvh/4Imagenes1Palabra"
-                        target="_blank"
-                        rel="noopener noreferer"
-                    >
-                        GitHub
-                    </a>
+                    <span class="pdf-link">
+                        <a
+                            class=""
+                            href="https://github.com/byronjvh/4Imagenes1Palabra"
+                            target="_blank"
+                            rel="noopener noreferer"
+                        >
+                            GitHub
+                        </a>
+                    </span>
 
                     <ul class="">
                         <li>
@@ -190,12 +193,16 @@ import "../styles/CV.css";
             html2pdf()
                 .from(document.getElementById("cv"))
                 .set({
-                    margin: [0.2, 0.605, 0.2, 0.605],
-                    filename: "mi-cv.pdf",
+                    letterRendering: true,
+                    pagebreak: { mode: "avoid-all" },
+                    margin: [0.2, 0.605, 0, 0.605],
+                    filename: "Byron_Vargas_CV.pdf",
                     image: { type: "jpeg", quality: 1 },
                     html2canvas: {
                         scale: 2,
                         width: 695 + 5,
+                        useCORS: true,
+                        scrollY: 0,
                     },
                     jsPDF: {
                         unit: "in",
