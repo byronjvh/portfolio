@@ -185,48 +185,73 @@ import Cap from "./icons/Cap.astro";
 	</Section>
 
 	<Section id="contact" className="flex-col justify-center items-start">
-		<h2>Contacto</h2>
-		<p>
-			¿Una idea en mente o un proyecto en camino? Estoy abierto a
-			colaboraciones y oportunidades.
-		</p>
-		<button onclick="window.location.href='mailto:byron@example.com'"
-			>Escríbeme</button
+		<div
+			class="contact-form-container pl-6 pr-8 pb-8 pt-6 w-full rounded-md"
 		>
-
-		<div>
-			<form class="contact-form" action="">
-				<div>
-					<label class="" for="name">
+			<div class="text-center mb-6">
+				<h2>Contacto</h2>
+				<p>
+					¿Una idea en mente o un proyecto en camino? Estoy abierto a
+					colaboraciones y oportunidades.
+				</p>
+			</div>
+			<form class="contact-form flex flex-col gap-6" action="">
+				<div class="flex flex-col gap-1">
+					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
 						<span class="contact-form-command">echo </span>
 
 						"Nombre: "</label
 					>
-					<input type="text" name="name" id="name" />
+					<span class="flex gap-2 items-center">
+						{">"}
+						<input
+							class="contact-form-input w-full py-1 px-2 border border-white rounded-sm"
+							type="text"
+							name="name"
+							id="name"
+							placeholder="Pablito C"
+						/>
+					</span>
 				</div>
-				<div>
-					<label class="" for="name">
+				<div class="flex flex-col gap-1">
+					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
 						<span class="contact-form-command">echo </span>
 
 						"Email: "</label
 					>
-					<input type="email" name="email" id="email" />
+					<span class="flex gap-2 items-center">
+						{">"}
+						<input
+							class="contact-form-input w-full py-1 px-2 border border-white rounded-sm"
+							type="email"
+							name="email"
+							id="email"
+							placeholder="pablitoc@email.com"
+						/>
+					</span>
 				</div>
-				<div>
-					<label class="" for="name">
+				<div class="flex flex-col gap-1">
+					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
 						<span class="contact-form-command">echo </span>
 
 						"Mensaje: "</label
 					>
-					<textarea name="message" id="message"></textarea>
+					<span class="flex gap-2 items-start">
+						{">"}
+						<textarea
+							class="w-full py-1 px-2 resize-none border border-white rounded-sm"
+							name="message"
+							id="message"
+							placeholder="Quiero trabajar contigo!"></textarea>
+					</span>
 				</div>
-				<button>Enviar</button>
+				<button class="cursor-pointer">Enviar</button>
 			</form>
 		</div>
 	</Section>
