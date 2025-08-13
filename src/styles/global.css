@@ -526,14 +526,19 @@ code span {
     transform-origin: center right;
 }
 
-.contact-form {
+.contact-form-container {
     font-family: var(--font-code);
+    background-color: var(--alt-bg-color);
+    border: 1px solid var(--accent2)
+}
+
+.contact-form {
     color: var(--title-color);
 }
 
-.contact-form label {
-    font-weight: bold;
-    font-size: 18px;
+.contact-form-container h2 {
+    font-family: var(--font-code);
+    font-size: 40px;
 }
 
 .contact-form-symbol {
