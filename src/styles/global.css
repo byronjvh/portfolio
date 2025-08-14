@@ -16,6 +16,7 @@ body {
     --bg-hexagon-lines: #2b313d;
     --bg-hexagon-light: #fff1a2;
     --alt-bg-color: #001828;
+    --input-color: #04101b;
     --p-color: #dbdad7;
     --title-color: #fffef5;
     --accent: #ffeb7c;
@@ -529,7 +530,8 @@ code span {
 .contact-form-container {
     font-family: var(--font-code);
     background-color: var(--alt-bg-color);
-    border: 1px solid var(--accent2)
+    border: 1px solid var(--accent2);
+    z-index: 0;
 }
 
 .contact-form {
@@ -538,7 +540,21 @@ code span {
 
 .contact-form-container h2 {
     font-family: var(--font-code);
-    font-size: 40px;
+    font-size: 18px;
+    background-color: var(--alt-bg-color);
+    position: relative;
+    z-index: 10;
+    border-inline: 1px solid var(--accent2);
+}
+
+.contact-form-container h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 1px;
+    width: 100%;
+    background-color: var(--alt-bg-color);
 }
 
 .contact-form-symbol {
@@ -547,4 +563,62 @@ code span {
 
 .contact-form-command {
     color: var(--accent);
+}
+
+.contact-form-header {
+    border-bottom: 1px solid var(--accent2);
+    background-color: var(--input-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: var(--input-color);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    transition: .2s border ease-out;
+    border-radius: 4px 4px 0 0;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.contact-form-button {
+    width: max-content;
+    align-self: center;
+    background-color: var(--alt-bg-color);
+    padding: 2px 32px;
+    position: relative;
+    border-radius: 2px;
+    transition: .2s color ease-out, .2s background ease-out;
+}
+
+.contact-form-button:hover {
+    background-color: var(--accent);
+    color: var(--bg-color);
+}
+
+.contact-form-button::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: 6px;
+    height: calc(100% + 4px);
+    z-index: -1;
+    border-radius: 2px;
+    background-color: var(--p-color);
+}
+
+.contact-form-button::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 6px;
+    height: calc(100% + 4px);
+    z-index: -1;
+    border-radius: 2px;
+    background-color: var(--p-color);
 }

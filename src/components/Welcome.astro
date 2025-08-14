@@ -13,6 +13,7 @@ import Section from "./Section.astro";
 import Link from "./Link.astro";
 import GridList from "./GridList.astro";
 import Cap from "./icons/Cap.astro";
+import Cross from "./icons/Cross.astro";
 ---
 
 <main id="container" class="overflow-y-scroll scroll-smooth max-h-svh pr-10">
@@ -185,18 +186,30 @@ import Cap from "./icons/Cap.astro";
 	</Section>
 
 	<Section id="contact" className="flex-col justify-center items-start">
-		<div
-			class="contact-form-container pl-6 pr-8 pb-8 pt-6 w-full rounded-md"
-		>
-			<div class="text-center mb-6">
-				<h2>Contacto</h2>
-				<p>
-					¿Una idea en mente o un proyecto en camino? Estoy abierto a
-					colaboraciones y oportunidades.
-				</p>
+		<div class="contact-form-container w-full rounded-md">
+			<div
+				class="contact-form-header w-full px-4 gap-4 flex items-center"
+			>
+				<div class="mac-buttons h-min"></div>
+				<h2 class="pl-3 pr-10 py-2">
+					Contacto <span class="code-cross"
+						><Cross
+							className="cross-icon"
+							rotate="45"
+							size="18"
+						/></span
+					>
+				</h2>
+				<Cross className="plus-icon" rotate="0" size="18" />
 			</div>
-			<form class="contact-form flex flex-col gap-6" action="">
-				<div class="flex flex-col gap-1">
+			<form
+				class="contact-form flex flex-col gap-4 pl-6 pr-8 pb-4 pt-3"
+				action=""
+			>
+				<p>
+					<span>{">"}</span> Escuchando ideas y solicitudes de colaboración...
+				</p>
+				<div class="flex flex-col gap-0.5">
 					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
@@ -207,7 +220,7 @@ import Cap from "./icons/Cap.astro";
 					<span class="flex gap-2 items-center">
 						{">"}
 						<input
-							class="contact-form-input w-full py-1 px-2 border border-white rounded-sm"
+							class="contact-form-input w-full py-1 px-2"
 							type="text"
 							name="name"
 							id="name"
@@ -215,7 +228,7 @@ import Cap from "./icons/Cap.astro";
 						/>
 					</span>
 				</div>
-				<div class="flex flex-col gap-1">
+				<div class="flex flex-col gap-0.5">
 					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
@@ -226,7 +239,7 @@ import Cap from "./icons/Cap.astro";
 					<span class="flex gap-2 items-center">
 						{">"}
 						<input
-							class="contact-form-input w-full py-1 px-2 border border-white rounded-sm"
+							class="contact-form-input w-full py-1 px-2"
 							type="email"
 							name="email"
 							id="email"
@@ -234,7 +247,7 @@ import Cap from "./icons/Cap.astro";
 						/>
 					</span>
 				</div>
-				<div class="flex flex-col gap-1">
+				<div class="flex flex-col gap-0.5">
 					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
@@ -242,16 +255,19 @@ import Cap from "./icons/Cap.astro";
 
 						"Mensaje: "</label
 					>
-					<span class="flex gap-2 items-start">
+					<span class="flex gap-2">
 						{">"}
 						<textarea
-							class="w-full py-1 px-2 resize-none border border-white rounded-sm"
+							class="w-full py-1 px-2 resize-none"
 							name="message"
 							id="message"
 							placeholder="Quiero trabajar contigo!"></textarea>
 					</span>
 				</div>
-				<button class="cursor-pointer">Enviar</button>
+				<button
+					class="cursor-pointer mt-1 font-bold contact-form-button"
+					>Enviar</button
+				>
 			</form>
 		</div>
 	</Section>
