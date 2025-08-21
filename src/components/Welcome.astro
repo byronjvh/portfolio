@@ -203,13 +203,13 @@ import Cross from "./icons/Cross.astro";
 				<Cross className="plus-icon" rotate="0" size="18" />
 			</div>
 			<form
-				class="contact-form flex flex-col gap-4 pl-6 pr-8 pb-6 pt-3"
-				action=""
+				id="contact-form"
+				class="contact-form flex flex-col pl-6 pr-8 pb-6 pt-3"
 			>
-				<p>
+				<p class="mb-2">
 					<span>{">"}</span> Escuchando ideas y solicitudes de colaboración...
 				</p>
-				<div class="flex flex-col gap-0.5">
+				<div class="flex flex-col gap-0.5 mb-2">
 					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
@@ -228,7 +228,7 @@ import Cross from "./icons/Cross.astro";
 						/>
 					</span>
 				</div>
-				<div class="flex flex-col gap-0.5">
+				<div class="flex flex-col gap-0.5 mb-2">
 					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
@@ -247,7 +247,7 @@ import Cross from "./icons/Cross.astro";
 						/>
 					</span>
 				</div>
-				<div class="flex flex-col gap-0.5">
+				<div class="flex flex-col gap-0.5 mb-1">
 					<label class="text-lg" for="name">
 						<span class="contact-form-symbol">$ </span>
 
@@ -264,11 +264,14 @@ import Cross from "./icons/Cross.astro";
 							placeholder="Quiero trabajar contigo!"></textarea>
 					</span>
 				</div>
+				<div id="form-error" class="mb-1 h-6 text-pink-400"></div>
 				<button
-					class="cursor-pointer mt-1 font-bold contact-form-button"
+					class="cursor-pointer mb-6 font-bold contact-form-button"
 					>Enviar</button
 				>
-				<div class="flex flex-col mt-1">
+				<div
+					class="flex flex-col pt-4 pb-2 border-t border-[#ffffff55]"
+				>
 					<span
 						>{"$"}
 						<span class="contact-form-command">open </span><a
