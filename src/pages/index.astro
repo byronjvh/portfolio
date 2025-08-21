@@ -14,7 +14,7 @@ import "../styles/global.css";
 		<span id="background-ball" class="background-effect-ball"></span>
 		<span id="background-ball2" class="background-effect-ball"></span>
 	</div>
-	<script type="module" is:client>
+	<script type="module" is:inline>
 		// Codeblock
 		import hljs from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/+esm";
 
@@ -29,10 +29,7 @@ import "../styles/global.css";
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						typingEffect?.classList.add("visible");
-						console.log(
-							"Elemento visible en pantalla:",
-							entry.target,
-						);
+
 						observer.unobserve(entry.target);
 					}
 				});
@@ -58,9 +55,42 @@ import "../styles/global.css";
 			const randomY2 = Math.floor(Math.random() * 1000);
 			const randomX2 = Math.floor(Math.random() * 500) + 900;
 			ball2.style.transform = `translateY(${randomY2}px) translateX(${randomX2}px)`;
-			console.log({ randomY2, randomX2 });
-
-			console.log({ randomY, randomX });
 		}, 2000);
+		//Resend (email service)
+		document
+			.getElementById("contact-form")
+			.addEventListener("submit", async (e) => {
+				e.preventDefault();
+				const form = new FormData(e.target);
+				const name = form.get("name");
+				const email = form.get("email");
+				const message = form.get("message");
+				const errorDiv = document.getElementById("form-error");
+				errorDiv.textContent = "";
+				if (!name || !email || !message) {
+					errorDiv.textContent =
+						"> Todos los campos son obligatorios.";
+					return;
+				}
+
+				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				if (!emailRegex.test(email)) {
+					errorDiv.textContent = "> Ingresa un email válido.";
+					return;
+				}
+
+				const res = await fetch("/api/contact", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						name: form.get("name"),
+						email: form.get("email"),
+						message: form.get("message"),
+					}),
+				});
+
+				const data = await res.json();
+				console.log(data);
+			});
 	</script>
 </Layout>
