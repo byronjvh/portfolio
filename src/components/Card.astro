@@ -17,29 +17,50 @@ const {
 } = Astro.props;
 ---
 
-<article class={`project-card card flex gap-6 ${className}`}>
-    <slot />
-    <div class=`flex flex-col gap-2 text`>
-        <h4 class="font-bold text-xl">{title}</h4>
-        {description ? <p class="">{description}</p> : ""}
+{
+    isHighlight ? (
+        <article
+            class={`project-card card flex gap-6 ${className} ${isHighlight ? "" : "cursor-pointer"}`}
+        >
+            <slot />
+            <div class=`flex flex-col gap-2 text`>
+                <h4 class="font-bold text-xl">{title}</h4>
+                {description ? <p class="">{description}</p> : ""}
 
-        <div class="mt-1 flex gap-1">
-            {
-                tags?.map((tag: string) => (
-                    <span class={`tag ${tag[1]}`}>{tag[0]}</span>
-                ))
-            }
-        </div>
-    </div>
+                <div class="mt-1 flex gap-1">
+                    {
+                        tags?.map((tag: string) => (
+                            <span class={`tag ${tag[1]}`}>{tag[0]}</span>
+                        ))
+                    }
+                </div>
+            </div>
 
-    {
-        isHighlight && (
             <div class="flex gap-3 items-center">
                 <Button url={github} className="button-1">
                     <GitHub size="18" /> Ver GitHub
                 </Button>
                 <Link url={page} />
             </div>
-        )
-    }
-</article>
+
+        </article>
+    ) : (
+        <a href={page} target="_blank" rel="noopener noreferer"
+            class={`project-card card flex gap-6 ${className} ${isHighlight ? "" : "cursor-pointer"}`}
+        >
+            <slot />
+            <div class=`flex flex-col gap-2 text`>
+                <h4 class="font-bold text-xl">{title}</h4>
+
+                <div class="mt-1 flex gap-1">
+                    {
+                        tags?.map((tag: string) => (
+                            <span class={`tag ${tag[1]}`}>{tag[0]}</span>
+                        ))
+                    }
+                </div>
+            </div>
+        </a>
+    )
+}
+
