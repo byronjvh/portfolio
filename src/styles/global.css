@@ -349,6 +349,11 @@ code span {
     color: #f6fbff;
 }
 
+.tag.gold {
+    background-color: #b8a443;
+    color: #fffbe6;
+}
+
 .tag.orange {
     background-color: #a25916;
     color: #fffaf5;
