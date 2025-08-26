@@ -38,6 +38,10 @@ h2 {
     font-size: 22px;
 }
 
+.profile {
+    margin-top: 4px;
+}
+
 p {
     line-height: normal;
     text-wrap: pretty;
