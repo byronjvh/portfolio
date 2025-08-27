@@ -609,10 +609,10 @@ code span {
     width: max-content;
     align-self: center;
     background-color: var(--alt-bg-color);
-    padding: 2px 32px;
+    padding: 2px 20px;
     position: relative;
     border-radius: 2px;
-    transition: .2s color ease-out, .2s background ease-out;
+    transition: .1s color ease-out, .1s background ease-out;
 }
 
 .contact-form-button:hover {

@@ -223,102 +223,98 @@ import Cross from "./icons/Cross.astro";
 			</div>
 			<form
 				id="contact-form"
-				class="contact-form flex flex-col pl-6 pr-8 pb-6 pt-3"
+				class="contact-form flex flex-col px-6 pb-2 pt-3"
 			>
-				<p class="mb-2">
-					<span>{">"}</span> Escuchando ideas y solicitudes de colaboración...
+				<p class="mb-2 pl-1 opacity-70">
+					<span>{"#"}</span> Escuchando ideas y solicitudes de colaboración...
 				</p>
-				<div class="flex flex-col gap-0.5 mb-2">
-					<label class="text-lg" for="name">
+				<div class="flex flex-col gap-0.5 mb-4">
+					<label class="text-lg pl-1" for="name">
 						<span class="contact-form-symbol">$ </span>
 
 						<span class="contact-form-command">echo </span>
 
-						"Nombre: "</label
+						"Nombre:"</label
 					>
 					<span class="flex gap-2 items-center">
-						{">"}
 						<input
-							class="contact-form-input w-full py-1 px-2"
+							class="contact-form-input w-full py-1 pl-1 pr-2"
 							type="text"
 							name="name"
 							id="name"
-							placeholder="Pablito C"
+							placeholder="> Pablito C"
 						/>
 					</span>
 				</div>
-				<div class="flex flex-col gap-0.5 mb-2">
-					<label class="text-lg" for="name">
+				<div class="flex flex-col gap-0.5 mb-4">
+					<label class="text-lg pl-1" for="name">
 						<span class="contact-form-symbol">$ </span>
 
 						<span class="contact-form-command">echo </span>
 
-						"Email: "</label
+						"Email:"</label
 					>
 					<span class="flex gap-2 items-center">
-						{">"}
 						<input
-							class="contact-form-input w-full py-1 px-2"
+							class="contact-form-input w-full py-1 pl-1 pr-2"
 							type="email"
 							name="email"
 							id="email"
-							placeholder="pablitoc@email.com"
+							placeholder="> pablitoc@email.com"
 						/>
 					</span>
 				</div>
-				<div class="flex flex-col gap-0.5 mb-1">
-					<label class="text-lg" for="name">
+				<div class="flex flex-col gap-0.5 mb-4">
+					<label class="text-lg pl-1" for="name">
 						<span class="contact-form-symbol">$ </span>
 
 						<span class="contact-form-command">echo </span>
 
-						"Mensaje: "</label
+						"Mensaje:"</label
 					>
 					<span class="flex gap-2">
-						{">"}
 						<textarea
-							class="w-full py-1 px-2 resize-none"
+							class="w-full py-1 pl-1 pr-2 resize-none"
 							name="message"
 							id="message"
-							placeholder="Quiero trabajar contigo!"></textarea>
+							placeholder="> Quiero trabajar contigo!"></textarea>
 					</span>
 				</div>
-				<div id="form-error" class="mb-1 h-6 text-pink-400"></div>
-				<button
-					class="cursor-pointer mb-6 font-bold contact-form-button"
-					>Enviar</button
-				>
-				<div
-					class="flex flex-col pt-4 pb-2 border-t border-[#ffffff55]"
-				>
-					<span
-						>{"$"}
-						<span class="contact-form-command">open </span><a
-							class="underline"
-							href="https://github.com/byronjvh"
-							target="_blank"
-							rel="noopener noreferer">github.com/byronjvh</a
-						></span
+
+				<div class="text-lg pl-1 mb-3">
+					<span class="contact-form-symbol">$ </span>
+
+					<span class="contact-form-command">echo </span>
+
+					"Acciones disponibles:"
+				</div>
+				<div class="flex gap-6 px-1 mb-3">
+					<button class="cursor-pointer font-bold contact-form-button"
+						>Enviar</button
 					>
-					<span
-						>{"$"}
-						<span class="contact-form-command">open </span><a
-							class="underline"
-							href="https://linkedin.com/in/byronjvh"
-							target="_blank"
-							rel="noopener noreferer">linkedin.com/in/byronjvh</a
-						></span
+					<a
+						href="https://github.com/byronjvh"
+						target="_blank"
+						rel="noopener noreferer"
+						class="cursor-pointer font-bold contact-form-button"
+						>GitHub</a
 					>
-					<span
-						>{"$"}
-						<span class="contact-form-command">open </span><a
-							class="underline"
-							href="https://wa.me/+50672062036"
-							target="_blank"
-							rel="noopener noreferer">wa.me/+50672062036</a
-						></span
+					<a
+						href="https://linkedin.com/in/byronjvh"
+						target="_blank"
+						rel="noopener noreferer"
+						class="cursor-pointer font-bold contact-form-button"
+						>Linkedin</a
+					>
+					<a
+						href="https://wa.me/+50672062036"
+						target="_blank"
+						rel="noopener noreferer"
+						class="cursor-pointer font-bold contact-form-button"
+						>Whatsapp</a
 					>
 				</div>
+				<div id="form-error" class="mb-3 h-6 text-pink-400"></div>
 			</form>
 		</div>
 	</Section>
