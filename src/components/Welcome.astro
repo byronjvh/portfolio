@@ -281,15 +281,17 @@ import Cross from "./icons/Cross.astro";
 					</span>
 				</div>
 
-				<div class="text-lg pl-1 mb-3">
+				<div class="text-lg relative pl-1 mb-3 w-max">
 					<span class="contact-form-symbol">$ </span>
 
 					<span class="contact-form-command">echo </span>
 
 					"Acciones disponibles:"
+					<span class="cursor-blink"></span>
 				</div>
 				<div class="flex gap-6 px-1 mb-3">
-					<button class="cursor-pointer font-bold contact-form-button"
+					<button
+						class="cursor-pointer font-bold contact-form-button submit"
 						>Enviar</button
 					>
 					<a
@@ -314,7 +316,7 @@ import Cross from "./icons/Cross.astro";
 						>Whatsapp</a
 					>
 				</div>
-				<div id="form-error" class="mb-3 h-6 text-pink-400"></div>
+				<div id="form-notification" class="mb-3 h-6"></div>
 			</form>
 		</div>
 	</Section>
