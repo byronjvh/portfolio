@@ -65,17 +65,26 @@ import "../styles/global.css";
 				const name = form.get("name");
 				const email = form.get("email");
 				const message = form.get("message");
-				const errorDiv = document.getElementById("form-error");
-				errorDiv.textContent = "";
+				const successColor = "text-green-400";
+				const errorColor = "text-pink-400";
+
+				const notificationDiv =
+					document.getElementById("form-notification");
+
+				// Default text and color
+				notificationDiv.classList.remove(successColor);
+				notificationDiv.classList.add(errorColor);
+				notificationDiv.textContent = "";
+
 				if (!name || !email || !message) {
-					errorDiv.textContent =
-						"> Todos los campos son obligatorios.";
+					notificationDiv.textContent =
+						"> Todos los campos son obligatorios!";
 					return;
 				}
 
 				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 				if (!emailRegex.test(email)) {
-					errorDiv.textContent = "> Ingresa un email válido.";
+					notificationDiv.textContent = "> Ingresa un email válido.";
 					return;
 				}
 
@@ -89,8 +98,13 @@ import "../styles/global.css";
 					}),
 				});
 
-				const data = await res.json();
-				console.log(data);
+				// const data = await res.json();
+
+				// If there are no errors
+				notificationDiv.classList.remove(errorColor);
+				notificationDiv.classList.add(successColor);
+				notificationDiv.textContent =
+					"> Mensaje enviado correctamente! 🚀";
 			});
 	</script>
 </Layout>
