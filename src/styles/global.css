@@ -22,7 +22,7 @@ body {
     --accent: #ffeb7c;
     --card-bg: #1b2538d8;
     --accent2: #1a86e5;
-    --accent3: #DB9F1F;
+    --accent3: #ffc13b;
     --accent2-gradient: linear-gradient(90deg, rgba(20, 106, 219, 1) 0%, rgba(20, 106, 219, 1) 50%, rgba(26, 134, 229, 1) 50%, rgba(26, 134, 229, 1) 100%);
     --border-color: #0a5291;
 
@@ -483,6 +483,17 @@ code span {
     }
 }
 
+.cursor-blink {
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 18px;
+    background-color: var(--accent3);
+    animation: cursor-blink 1s ease-out infinite;
+}
+
 .background-effect {
     position: absolute;
     /* background: var(--bg-hexagon-lines); */
@@ -613,6 +624,18 @@ code span {
     position: relative;
     border-radius: 2px;
     transition: .1s color ease-out, .1s background ease-out;
+}
+
+.contact-form-button.submit {
+    color: var(--accent3);
+}
+
+.contact-form-button.submit::after {
+    background-color: var(--accent3);
+}
+
+.contact-form-button.submit::before {
+    background-color: var(--accent3);
 }
 
 .contact-form-button:hover {
