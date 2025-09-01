@@ -37,23 +37,44 @@ import NavLink from "./NavLink.astro";
     });
 </script>
 
-<nav class="h-full flex items-center p-2">
+<nav class="flex items-center">
     <ul id="link-list" class="link-list relative pl-6 text-lg">
         <span id="scroll-thumb"></span>
         <li class="">
-            <NavLink url="#home" className="light" text="Inicio" />
+            <NavLink url="#home" className="h-16 light">Inicio</NavLink>
         </li>
         <li class="">
-            <NavLink url="#projects" id="link2" text="Proyectos" />
+            <NavLink url="#projects" className="h-16" id="link2"
+                >Proyectos</NavLink
+            >
         </li>
         <li>
-            <NavLink url="#about" id="link3" text="Sobre mí" />
+            <NavLink url="#about" className="h-16" id="link3">Sobre mí</NavLink>
         </li>
         <li>
-            <NavLink url="#skills" id="link4" text="Skills" />
+            <NavLink url="#skills" className="h-16" id="link4">Skills</NavLink>
         </li>
         <li>
-            <NavLink url="#contact" id="link5" text="Contacto" />
+            <NavLink url="#contact" className="h-16" id="link5"
+                >Contacto</NavLink
+            >
+        </li>
+    </ul>
+    <ul class="link-list-mobile relative flex justify-between w-full px-8">
+        <li class="">
+            <NavLink url="#home" className="light">Inicio</NavLink>
+        </li>
+        <li class="">
+            <NavLink url="#projects" id="link2">Proyectos</NavLink>
+        </li>
+        <li>
+            <NavLink url="#about" id="link3">Sobre mí</NavLink>
+        </li>
+        <li>
+            <NavLink url="#skills" id="link4">Skills</NavLink>
+        </li>
+        <li>
+            <NavLink url="#contact" id="link5">Contacto</NavLink>
         </li>
     </ul>
 </nav>

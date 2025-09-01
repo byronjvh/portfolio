@@ -32,12 +32,12 @@ body {
 
     font-family: var(--font-p);
     margin: 0 auto;
-    padding: 0 8px 0 8px;
     max-width: 790px;
     height: 100svh;
     background-color: var(--bg-color);
     color: var(--p-color);
     display: flex;
+    flex-direction: column;
     overflow: hidden;
 }
 
@@ -71,11 +71,22 @@ main {
     /* Para Firefox */
     -ms-overflow-style: none;
     /* Para Internet Explorer y Edge antiguos */
+    padding-right: 0;
 }
 
 main::-webkit-scrollbar {
     display: none;
     /* Para Chrome, Safari y Opera */
+}
+
+nav {
+    background-color: var(--bg-color);
+    padding: 16px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.link-list {
+    display: none;
 }
 
 .link-list::before {
@@ -98,7 +109,6 @@ main::-webkit-scrollbar {
     top: 0;
     border-radius: 1px;
     background-color: var(--light);
-    /* box-shadow: 0px 0px 8px 0px var(--light); */
     scale: 1 0.2;
     transition: scale .3s ease;
     transform-origin: top;
@@ -110,7 +120,7 @@ main::-webkit-scrollbar {
     position: relative;
 }
 
-.nav-link::after {
+.nav-link.underline-effect::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -127,12 +137,12 @@ main::-webkit-scrollbar {
     background-position: 0;
 }
 
-.nav-link:hover::after {
+.nav-link.underline-effect:hover::after {
     transform: scaleX(1);
     background-position: 80px;
 }
 
-.nav-link::before {
+.link-list .nav-link::before {
     content: '';
     position: absolute;
     left: -28px;
@@ -145,7 +155,7 @@ main::-webkit-scrollbar {
     transition: box-shadow .4s ease-in, background .5s ease;
 }
 
-.nav-link.light::before {
+.link-list .nav-link.light::before {
     box-shadow: 0px 0px 10px 0px var(--light);
     background-color: var(--light);
 }
@@ -389,6 +399,7 @@ code span {
     position: relative;
     width: auto;
     color: var(--title-color);
+    text-wrap: nowrap;
 }
 
 .link-underline {
@@ -421,7 +432,7 @@ code span {
 
 .typing-effect {
     position: absolute;
-    right: 195px;
+    left: 160px;
     bottom: 28px;
     font-size: 17px;
     width: 29ch;
@@ -433,7 +444,7 @@ code span {
 .typing-effect::after {
     position: absolute;
     top: 50%;
-    left: 2px;
+    left: 0;
     transform: translateY(-50%);
     content: '';
     width: 2px;
@@ -464,6 +475,7 @@ code span {
 
 @keyframes typing-2 {
     to {
+        left: 412px;
         width: 0px;
     }
 }
@@ -529,6 +541,11 @@ code span {
     background-color: var(--bg-hexagon-light);
     z-index: -5;
     transition: transform 2s linear;
+}
+
+.gridList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .skills {
@@ -665,4 +682,28 @@ code span {
     z-index: -1;
     border-radius: 2px;
     background-color: var(--p-color);
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        flex-direction: row;
+    }
+
+    main {
+        padding-right: 28px;
+    }
+
+    .link-list-mobile {
+        display: none;
+    }
+
+    .link-list {
+        display: block;
+    }
+
+    nav {
+        background-color: unset;
+        padding: unset;
+        border-top: unset;
+    }
 }

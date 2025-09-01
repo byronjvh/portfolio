@@ -1,11 +1,11 @@
 ---
-const { text, url, id, className } = Astro.props;
+const { url, id, className } = Astro.props;
 ---
 
 <a
     id={id}
-    class=`nav-link inline-flex h-16 mt-2 w-full items-end relative ${className}`
+    class=`nav-link inline-flex mt-2 w-full items-end relative underline-effect ${className}`
     href={url}
 >
-    {text}</a
->
+    <slot />
+</a>
