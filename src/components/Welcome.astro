@@ -16,12 +16,12 @@ import Cross from "./icons/Cross.astro";
 
 <main id="container" class="overflow-y-scroll scroll-smooth max-h-svh">
 	<Section id="home" className="px-2">
-		<div class="flex flex-col gap-7">
+		<div class="hero flex flex-col">
 			<div class="flex flex-col gap-4">
-				<h1 class="text-8xl -translate-x-1 text-balance">
+				<h1 class="-translate-x-1 text-balance">
 					Byron Vargas Hernández
 				</h1>
-				<p class="text-lg w-full leading-6">
+				<p class="w-full leading-6 min-h-[72px]">
 					Desarrollo soluciones digitales que mejoran la experiencia
 					del usuario y marcan la <span class="text-highlight"
 						>diferencia</span
@@ -32,7 +32,7 @@ import Cross from "./icons/Cross.astro";
 					>
 				</p>
 			</div>
-			<div class="flex gap-3 items-center">
+			<div class="hero-buttons flex gap-3 flex-wrap items-center">
 				<Button url="https://github.com/byronjvh" className="button-1">
 					<GitHub size="18" /> Ver GitHub
 				</Button>
@@ -52,7 +52,7 @@ import Cross from "./icons/Cross.astro";
 
 	<Section
 		id="projects"
-		className="flex-col justify-center items-start gap-6 px-2"
+		className="projects flex-col justify-center items-start gap-6 px-2"
 	>
 		<div class="flex flex-col w-full text-center">
 			<h2 class="leading-15">Mi trabajo</h2>
@@ -62,7 +62,7 @@ import Cross from "./icons/Cross.astro";
 			</p>
 		</div>
 		<div class="relative w-full">
-			<div class="projects">
+			<div class="projects-list">
 				<Card
 					className="card1"
 					title="Popix Editor"
@@ -224,7 +224,7 @@ import Cross from "./icons/Cross.astro";
 			</div>
 			<form
 				id="contact-form"
-				class="contact-form flex flex-col px-6 pb-2 pt-3"
+				class="contact-form flex flex-col px-2 sm:px-6 pb-2 pt-3"
 			>
 				<p class="mb-2 pl-1 opacity-70">
 					<span>{"#"}</span> Escuchando ideas y solicitudes de colaboración...
@@ -290,7 +290,7 @@ import Cross from "./icons/Cross.astro";
 					"Acciones disponibles:"
 					<span class="cursor-blink"></span>
 				</div>
-				<div class="flex gap-6 px-1 mb-3">
+				<div class="flex flex-wrap gap-6 px-1 mb-3">
 					<button
 						class="cursor-pointer font-bold contact-form-button submit"
 						>Enviar</button

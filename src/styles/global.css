@@ -57,6 +57,21 @@ h3 {
 
 h1 {
     font-weight: 800;
+    font-size: 48px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.hero {
+    text-align: center;
+    font-size: 14px;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-buttons {
+    max-width: 160px;
+    justify-content: center;
 }
 
 .text-highlight {
@@ -81,12 +96,20 @@ main::-webkit-scrollbar {
 
 nav {
     background-color: var(--bg-color);
-    padding: 16px 0;
+    padding: 20px 16px;
     border-top: 1px solid var(--border-color);
 }
 
 .link-list {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.link-list li {
+    display: inline-block;
 }
 
 .link-list::before {
@@ -98,6 +121,7 @@ nav {
     top: 0;
     border-radius: 1px;
     background-color: var(--scroll-bg-color);
+    display: none;
 }
 
 #scroll-thumb {
@@ -112,12 +136,14 @@ nav {
     scale: 1 0.2;
     transition: scale .3s ease;
     transform-origin: top;
+    display: none;
 }
 
 .nav-link {
     color: var(--title-color);
     font-family: var(--font-title);
     position: relative;
+    margin-top: 0;
 }
 
 .nav-link.underline-effect::after {
@@ -142,7 +168,7 @@ nav {
     background-position: 80px;
 }
 
-.link-list .nav-link::before {
+.nav-link::before {
     content: '';
     position: absolute;
     left: -28px;
@@ -153,11 +179,13 @@ nav {
     box-shadow: 0px 0px 0px 0px var(--light);
     background-color: var(--scroll-bg-color);
     transition: box-shadow .4s ease-in, background .5s ease;
+    display: none;
 }
 
-.link-list .nav-link.light::before {
+.nav-link.light::before {
     box-shadow: 0px 0px 10px 0px var(--light);
     background-color: var(--light);
+    display: none;
 }
 
 .button {
@@ -199,11 +227,15 @@ nav {
 }
 
 .projects {
+    max-height: unset;
+    height: auto;
+}
+
+.projects-list {
     gap: 16px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, max-content);
-
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content)
 }
 
 .project-card {
@@ -462,14 +494,15 @@ code span {
     vertical-align: bottom;
     text-wrap: nowrap;
     white-space: nowrap;
-    width: 0;
+    width: 226px;
     overflow: hidden;
     animation: typing 2.5s steps(34, end) forwards;
+    animation-direction: reverse;
 }
 
 @keyframes typing {
     to {
-        width: 291px;
+        width: 0;
     }
 }
 
@@ -693,17 +726,84 @@ code span {
         padding-right: 28px;
     }
 
-    .link-list-mobile {
-        display: none;
-    }
-
-    .link-list {
-        display: block;
-    }
-
     nav {
         background-color: unset;
         padding: unset;
         border-top: unset;
+        padding: 16px 0;
+    }
+
+    #scroll-thumb {
+        display: block;
+    }
+
+    .link-list {
+        flex-direction: column;
+        padding-left: 24px;
+    }
+
+    .link-list::before {
+        display: block;
+    }
+
+    .nav-link {
+        height: 64px;
+        margin-top: 8px;
+    }
+
+    .nav-link::before {
+        display: block;
+    }
+
+    .nav-link.light::before {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    h1 {
+        font-size: 96px;
+        text-align: left;
+    }
+
+    .hero {
+        text-align: left;
+        font-size: 14px;
+        align-items: start;
+        gap: 0;
+    }
+
+
+    .projects-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+
+    }
+
+    .projects {
+        max-height: 100svh;
+        height: 100svh;
+    }
+
+}
+
+@media screen and (min-width: 520px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    .hero {
+        font-size: 18px;
+    }
+
+    .hero-typing {
+        width: 290px;
+    }
+
+}
+
+@media screen and (min-width: 380px) {
+    .hero-buttons {
+        max-width: unset;
     }
 }
