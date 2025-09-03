@@ -31,14 +31,10 @@ body {
     --font-code: 'Ubuntu Mono', monospace;
 
     font-family: var(--font-p);
-    margin: 0 auto;
-    max-width: 790px;
-    height: 100svh;
     background-color: var(--bg-color);
     color: var(--p-color);
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
+    height: 100svh;
 }
 
 h1,
@@ -144,6 +140,14 @@ nav {
     font-family: var(--font-title);
     position: relative;
     margin-top: 0;
+}
+
+.nav-link-icon {
+    display: inline-block;
+}
+
+.nav-link-text {
+    display: none;
 }
 
 .nav-link.underline-effect::after {
@@ -561,6 +565,9 @@ code span {
     transform: translate(-50%, -50%);
     color: var(--bg-color);
     z-index: -5;
+    min-height: 100svh;
+    object-fit: cover;
+
 }
 
 .background-effect-ball {
@@ -718,7 +725,7 @@ code span {
 }
 
 @media screen and (min-width: 800px) {
-    body {
+    .app {
         flex-direction: row;
     }
 
@@ -798,6 +805,14 @@ code span {
 
     .hero-typing {
         width: 290px;
+    }
+
+    .nav-link-icon {
+        display: none;
+    }
+
+    .nav-link-text {
+        display: inline-block;
     }
 
 }

@@ -1,4 +1,9 @@
 ---
+import About from "./icons/About.astro";
+import Contact from "./icons/Contact.astro";
+import Home from "./icons/Home.astro";
+import Projects from "./icons/Projects.astro";
+import Skills from "./icons/Skills.astro";
 import NavLink from "./NavLink.astro";
 ---
 
@@ -41,19 +46,34 @@ import NavLink from "./NavLink.astro";
     <ul id="link-list" class="link-list relative text-lg">
         <span id="scroll-thumb"></span>
         <li class="">
-            <NavLink url="#home" className=" light">Inicio</NavLink>
+            <NavLink url="#home" className="light"
+                ><span class="nav-link-icon"><Home /></span>
+                <span class="nav-link-text">Inicio</span>
+            </NavLink>
         </li>
         <li class="">
-            <NavLink url="#projects" className="" id="link2">Proyectos</NavLink>
+            <NavLink url="#projects" className="" id="link2"
+                ><span class="nav-link-icon"><Projects /></span>
+                <span class="nav-link-text">Proyectos</span>
+            </NavLink>
         </li>
         <li>
-            <NavLink url="#about" className="" id="link3">Sobre mí</NavLink>
+            <NavLink url="#about" className="" id="link3"
+                ><span class="nav-link-icon"><About /></span>
+                <span class="nav-link-text">Sobre mí</span>
+            </NavLink>
         </li>
         <li>
-            <NavLink url="#skills" className="" id="link4">Skills</NavLink>
+            <NavLink url="#skills" className="" id="link4"
+                ><span class="nav-link-icon"><Skills /></span>
+                <span class="nav-link-text">Skills</span></NavLink
+            >
         </li>
         <li>
-            <NavLink url="#contact" className="" id="link5">Contacto</NavLink>
+            <NavLink url="#contact" className="" id="link5"
+                ><span class="nav-link-icon"><Contact /></span>
+                <span class="nav-link-text">Contacto</span>
+            </NavLink>
         </li>
     </ul>
 </nav>

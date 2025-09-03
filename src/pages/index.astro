@@ -7,12 +7,16 @@ import "../styles/global.css";
 ---
 
 <Layout>
-	<Welcome />
-	<Nav />
-	<BackgroundEffect className="background-effect-hexagon" />
-	<div class="background-effect">
-		<span id="background-ball" class="background-effect-ball"></span>
-		<span id="background-ball2" class="background-effect-ball"></span>
+	<div class="overflow-hidden relative w-full h-full object-cover">
+		<div class="app flex flex-col max-w-[790px] max-h-svh mx-auto">
+			<Welcome />
+			<Nav />
+		</div>
+		<BackgroundEffect className="background-effect-hexagon" />
+		<div class="background-effect">
+			<span id="background-ball" class="background-effect-ball"></span>
+			<span id="background-ball2" class="background-effect-ball"></span>
+		</div>
 	</div>
 	<script type="module" is:inline>
 		// Codeblock
@@ -97,8 +101,6 @@ import "../styles/global.css";
 						message: form.get("message"),
 					}),
 				});
-
-				// const data = await res.json();
 
 				// If there are no errors
 				notificationDiv.classList.remove(errorColor);
