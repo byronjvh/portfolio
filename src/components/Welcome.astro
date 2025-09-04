@@ -12,6 +12,45 @@ import Link from "./Link.astro";
 import GridList from "./GridList.astro";
 import Cap from "./icons/Cap.astro";
 import Cross from "./icons/Cross.astro";
+
+const desktopCode = `
+  const Byron = {
+    perfil: "Frontend Developer que ama el diseño limpio, el código
+	        legible y los cafés bien amargos.",
+    tecnologias: [
+	  "JavaScript", "React", "Next.js", "Astro", "Tailwind", "MySQL"
+	],
+	superpoderes: [
+	  "👀 Si algo se mueve 1px, me doy cuenta",
+      "⚡ Aprender rápido",
+      "🤝 Trabajo en equipo"
+	],
+    mision: "Ayudar a convertir ideas en realidad digital."
+  }
+
+  console.log("🚀 Ejecutando perfil:", Byron);
+	`;
+const mobileCode = `
+  const Byron = {
+    perfil: "Frontend Developer que ama el 
+			 diseño limpio, el código legible 
+			 y los cafés bien amargos.",
+    tecnologias: [
+	  "JavaScript", "React", "Next.js", 
+	  "Astro", "Tailwind", "MySQL"
+	],
+	superpoderes: [
+	  "👀 Si algo se mueve 1px, 
+	   me doy cuenta",
+      "⚡ Aprender rápido",
+      "🤝 Trabajo en equipo"
+	],
+    mision: "Ayudar a convertir ideas en 
+			 realidad digital."
+  }
+
+  console.log("🚀 Ejecutando perfil:", Byron);
+	`;
 ---
 
 <main id="container" class="overflow-y-scroll scroll-smooth max-h-svh">
@@ -54,7 +93,7 @@ import Cross from "./icons/Cross.astro";
 		id="projects"
 		className="projects flex-col justify-center items-start gap-6 px-2"
 	>
-		<div class="flex flex-col w-full text-center">
+		<div class="flex flex-col w-full items-center text-center">
 			<h2 class="leading-15">Mi trabajo</h2>
 			<p class="max-w-[600px] text-balance">
 				Proyectos creados con precisión y propósito para ofrecer
@@ -123,23 +162,14 @@ import Cross from "./icons/Cross.astro";
 		className="about flex-col justify-center items-start px-2"
 	>
 		<CodeBlock
-			code={`
-  const Byron = {
-    perfil: "Frontend Developer que ama el diseño limpio, el código
-	        legible y los cafés bien amargos.",
-    tecnologias: [
-	  "JavaScript", "React", "Next.js", "Astro", "Tailwind", "MySQL"
-	],
-	superpoderes: [
-	  "👀 Si algo se mueve 1px, me doy cuenta",
-      "⚡ Aprender rápido",
-      "🤝 Trabajo en equipo"
-	],
-    mision: "Ayudar a convertir ideas en realidad digital."
-  }
-
-  console.log("🚀 Ejecutando perfil:", Byron);
-	`}
+			className="codeBlock-mobile"
+			id="codeBlock codeBlock-about"
+			code={mobileCode}
+		/>
+		<CodeBlock
+			className="codeBlock-desktop"
+			id="codeBlock codeBlock-about"
+			code={desktopCode}
 		/>
 	</Section>
 

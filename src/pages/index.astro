@@ -27,14 +27,14 @@ import "../styles/global.css";
 		});
 
 		//Typing effect
-		const typingEffect = document.getElementById("typing-effect");
-		const observer = new IntersectionObserver(
+		const codeBlockMobile = document.querySelector(".codeBlock-mobile");
+		const codeBlockDesktop = document.querySelector(".codeBlock-desktop");
+		const observerMobile = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						typingEffect?.classList.add("visible");
-
-						observer.unobserve(entry.target);
+						codeBlockMobile.classList.add("visible");
+						observerMobile.unobserve(entry.target);
 					}
 				});
 			},
@@ -42,9 +42,21 @@ import "../styles/global.css";
 				threshold: 0.9,
 			},
 		);
-
-		const codeBlock = document.getElementById("codeBlock");
-		if (codeBlock) observer.observe(codeBlock);
+		const observerDesktop = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						codeBlockDesktop.classList.add("visible");
+						observerDesktop.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.9,
+			},
+		);
+		if (codeBlockMobile) observerMobile.observe(codeBlockMobile);
+		if (codeBlockDesktop) observerDesktop.observe(codeBlockDesktop);
 
 		//background effect
 		const ball = document.getElementById("background-ball");

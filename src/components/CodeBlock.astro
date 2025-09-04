@@ -4,11 +4,13 @@ import Cross from "./icons/Cross.astro";
 interface Props {
     code: string;
     lang?: string;
+    id: string;
+    className: string;
 }
-const { code, lang = "js" } = Astro.props;
+const { code, lang = "js", id = "codeBlock", className } = Astro.props;
 ---
 
 <pre
-    id="codeBlock"
-    class="w-full codeblock rounded-lg overflow-hidden relative"><div class="code-header"><div class="mac-buttons" /><h4>Sobre mí <span class="code-cross"><Cross className="cross-icon" rotate="45" size="18" /></span> </h4><Cross className="plus-icon" rotate="0" size="18" /></div><code class={`language-${lang} `} set:html={code} />
-<div class="typing-effect" id="typing-effect" /></pre>
+    id={id}
+    class=`w-full codeBlock rounded-lg overflow-hidden relative ${className}`><div class="code-header"><div class="mac-buttons" /><h4>Sobre mí <span class="code-cross"><Cross className="cross-icon" rotate="45" size="18" /></span> </h4><Cross className="plus-icon" rotate="0" size="18" /></div><code class={`language-${lang} `} set:html={code} />
+<div class="typing-effect typing-effect-desktop" /><div class="typing-effect typing-effect-mobile" /></pre>
