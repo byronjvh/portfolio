@@ -120,5 +120,26 @@ import "../styles/global.css";
 				notificationDiv.textContent =
 					"> Mensaje enviado correctamente! 🚀";
 			});
+
+		// detect current section
+		const secciones = document.querySelectorAll("section");
+		const opciones = {
+			threshold: 0.4,
+		};
+
+		const observer = new IntersectionObserver((entradas) => {
+			entradas.forEach((entrada) => {
+				const id = entrada.target.getAttribute("id");
+				const icono = document.getElementById("icon-" + id);
+
+				if (entrada.isIntersecting) {
+					icono.classList.add("current");
+				} else {
+					icono.classList.remove("current");
+				}
+			});
+		}, opciones);
+
+		secciones.forEach((sec) => observer.observe(sec));
 	</script>
 </Layout>
