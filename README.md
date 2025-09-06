@@ -1,48 +1,22 @@
-# Astro Starter Kit: Basics
+# FPS Calculator
+A personal portfolio built with modern web technologies, featuring interactive projects, a developer-focused design, and a clean UI.
+![Main page](https://github.com/byronjvh/portfolio/blob/main/src/assets/landing.png?raw=true)
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Deployed project](#deploy)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## General info
+A personal portfolio showcasing interactive projects and a unique terminal-inspired design. Built with Astro and modern frontend practices, it highlights clean UI, responsive layouts, and smooth user interactions.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Technologies
+technologies and dependencies used in this project:
+* [Astro](https://astro.build/)
+* [Resend](https://resend.com/)
+* [NodeJS](https://nodejs.org/es)
+* [Tailwind](https://tailwindcss.com/)
+* [html2pdf](https://ekoopmans.github.io/html2pdf.js/)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Deploy
+* [byronjvh.com](https://byronjvh.com)
