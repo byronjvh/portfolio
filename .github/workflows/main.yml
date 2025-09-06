@@ -1,40 +1,36 @@
-name: Build Astro and Deploy to dist
+name: Build Astro and Push to dist branch
 
-# Se dispara cada vez que haces push a main
 on:
   push:
     branches:
-      - main
+      - main   # Corre cada vez que haces push a main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Clona el repo
       - name: Checkout main
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Necesario para poder hacer push a otra rama
+          fetch-depth: 0   # Necesario para poder hacer push a otra rama
 
-      # 2️⃣ Configura Node
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # O cambia a 20 si tu proyecto lo usa
+          node-version: 18   # O cambia a 20 si tu proyecto lo usa
 
-      # 3️⃣ Instala dependencias y build
-      - name: Install dependencies
-        run: npm install
+      - run: npm install
+      - run: npm run build
 
-      - name: Build project
-        run: npm run build
-
-      # 4️⃣ Push a la rama dist usando acción de push
       - name: Deploy to dist branch
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: dist
-          force: true
-          directory: dist
+        run: |
+          cd dist
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy $(date)"
+          git branch -M dist
+          git remote add origin https://github.com/${{ github.repository }}.git
+          git push --force origin dist
