@@ -1,0 +1,17 @@
+name: Deploy to Hostinger on dist push
+
+on:
+  push:
+    branches:
+      - dist   # Se activa cuando tu primer workflow hace push a dist
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Hostinger Webhook
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d '{}' \
+            "https://webhooks.hostinger.com/deploy/da9e4d374c9bdf92f5fffe4c434ddc8a"
