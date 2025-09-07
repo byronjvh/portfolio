@@ -1,24 +1,24 @@
-name: Build and Deploy
+name: Build Astro and Push to dist branch
 
 on:
   push:
     branches:
-      - main
+      - main   # Corre cada vez que haces push a main
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout main
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 0   # Necesario para poder hacer push a otra rama
 
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 18  
 
       - run: npm install
       - run: npm run build
@@ -34,10 +34,3 @@ jobs:
           git branch -M dist
           git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push --force origin dist
-
-      - name: Trigger Hostinger Webhook
-        run: |
-          curl -v -X POST \
-          -H "Content-Type: application/json" \
-          -d '{}' \
-          https://webhooks.hostinger.com/deploy/da9e4d374c9bdf92f5fffe4c434ddc8a
