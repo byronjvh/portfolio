@@ -110,9 +110,9 @@ import "../styles/global.css";
 						method: "POST",
 						headers: { "Content-Type": "application/json" },
 						body: JSON.stringify({
-							name: form.get("name"),
-							email: form.get("email"),
-							message: form.get("message"),
+							name: form.get("name") || "",
+							email: form.get("email") || "",
+							message: form.get("message") || "",
 						}),
 					},
 				);
