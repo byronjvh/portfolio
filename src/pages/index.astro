@@ -104,15 +104,18 @@ import "../styles/global.css";
 					return;
 				}
 
-				const res = await fetch("/api/contact", {
-					method: "POST",
-					headers: { "Content-Type": "application/json" },
-					body: JSON.stringify({
-						name: form.get("name"),
-						email: form.get("email"),
-						message: form.get("message"),
-					}),
-				});
+				const res = await fetch(
+					"https://byronjvh-portfolio-api.vercel.app",
+					{
+						method: "POST",
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify({
+							name: form.get("name"),
+							email: form.get("email"),
+							message: form.get("message"),
+						}),
+					},
+				);
 
 				// If there are no errors
 				notificationDiv.classList.remove(errorColor);
