@@ -1,53 +1,36 @@
-name: Build Astro and Deploy to Hostinger
+name: Deploy to Hostinger
 
 on:
   push:
     branches:
-      - main   # Se ejecuta cada vez que haces push a main
+      - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      - name: Setup Node
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build Astro
+      - name: Build project
         run: npm run build
 
-      - name: Deploy to dist branch 
-        run: | 
-          cd dist 
-          git init 
-          git config user.name "github-actions[bot]" 
-          git config user.email "github-actions[bot]@users.noreply.github.com" 
-          git add . 
-          git commit -m "Deploy $(date)" 
-          git branch -M dist 
-          git remote add origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git 
-          git push --force origin dist
-
-      - name: Deploy via SFTP to Hostinger
-        uses: appleboy/scp-action@master
+      - name: Deploy to Hostinger
+        uses: appleboy/ssh-action@v0.1.5
         with:
           host: ${{ secrets.HOSTINGER_HOST }}
           username: ${{ secrets.HOSTINGER_USER }}
-          password: ${{ secrets.HOSTINGER_PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 65002
-          source: "./dist/*"
-          target: "."
-          overwrite: true
-          strip_components: 0
-          exclude: ".git/**"   # ✅ Ignora la carpeta .git
-
+          script: |
+            rm -rf ~/public_html/*
+            cp -r ~/dist/* ~/public_html/
