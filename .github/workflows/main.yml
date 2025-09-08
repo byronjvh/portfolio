@@ -41,7 +41,7 @@ jobs:
       - name: Deploy to Hostinger via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: byronjvh.com
+          server: $${{ secrets.HOSTINGER_HOST }}
           username: $${{ secrets.HOSTINGER_USER }}
           password: $${{ secrets.HOSTINGER_PASSWORD }}
           local-dir: ./dist/
