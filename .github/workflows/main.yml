@@ -46,5 +46,5 @@ jobs:
           password: ${{ secrets.HOSTINGER_PASSWORD }}
           protocol: ftps
           local-dir: ./dist/
-          remote-dir: /public_html/
+          server-dir: /public_html/
           port: 65002
