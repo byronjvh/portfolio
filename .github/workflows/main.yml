@@ -41,8 +41,9 @@ jobs:
       - name: Deploy to Hostinger via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp://$${{ secrets.HOSTINGER_HOST }}
+          server: $${{ secrets.HOSTINGER_HOST }}
           username: $${{ secrets.HOSTINGER_USER }}
           password: $${{ secrets.HOSTINGER_PASSWORD }}
           local-dir: ./dist/
           server-dir: /public_html/
+          protocol: ftps
