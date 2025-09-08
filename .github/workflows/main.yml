@@ -1,36 +1,29 @@
-name: Deploy to Hostinger
+name: Generate a build and push to another branch
 
 on:
   push:
     branches:
-      - main
+      - main # The branch name your are commit the new changes
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    name: Build and Push
     steps:
-      - name: Checkout code
+      - name: git-checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install dependencies
+      - name: Install all dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
+      - name: Build
+        run: npm run build # The build command of your project
 
-      - name: Deploy to Hostinger
-        uses: appleboy/ssh-action@v0.1.5
-        with:
-          host: ${{ secrets.HOSTINGER_HOST }}
-          username: ${{ secrets.HOSTINGER_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 65002
-          script: |
-            rm -rf ~/public_html/*
-            cp -r ~/dist/* ~/public_html/
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: dist # The branch name where you want to push the assets
+          FOLDER: dist # The directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message
