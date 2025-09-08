@@ -41,7 +41,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp.byronjvh.com
+          server: byronjvh.com
           username: u320875986
           password: ${{ secrets.HOSTINGER_PASSWORD }}
           protocol: ftps
