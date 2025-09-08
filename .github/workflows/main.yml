@@ -46,3 +46,11 @@ jobs:
           ftp-password: ${{ secrets.HOSTINGER_PASSWORD }}
           local-dir: ./dist/
           remote-dir: /public_html/
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ftp.byronjvh.com
+          username: u320875986
+          password: ${{ secrets.HOSTINGER_PASSWORD }}
+          protocol: ftps
+          port: 65002
