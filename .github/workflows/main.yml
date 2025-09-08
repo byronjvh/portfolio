@@ -38,13 +38,13 @@ jobs:
           git remote add origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
           git push --force origin dist
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: Deploy via SFTP to Hostinger
+        uses: appleboy/scp-action@master
         with:
-          server: byronjvh.com
-          username: u320875986
+          host: ${{ secrets.HOSTINGER_HOST }}       # ej. 82.29.86.246
+          username: ${{ secrets.HOSTINGER_USER }}   # ej. u320875986
           password: ${{ secrets.HOSTINGER_PASSWORD }}
-          protocol: ftps
-          local-dir: ./dist/
-          server-dir: /public_html/
-          port: 65002
+          port: 65002                                # puerto SSH/SFTP que te dio Hostinger
+          source: "./dist/*"                         # carpeta generada por Astro
+          target: "/public_html/"                    # carpeta en el servidor
+          rm: true                                   # borra archivos remotos que ya no existen localmente
