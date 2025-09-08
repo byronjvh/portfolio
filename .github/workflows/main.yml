@@ -26,7 +26,7 @@ jobs:
       - name: Build Astro
         run: npm run build
 
-      - name: Push to dist branch (opcional)
+      - name: Push to dist branch
         run: |
           cd dist
           git init
