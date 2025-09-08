@@ -1,29 +1,32 @@
-name: Build Astro and Push to dist branch
+name: Build Astro and Deploy to Hostinger
 
 on:
   push:
     branches:
-      - main   # Corre cada vez que haces push a main
+      - main   # Se ejecuta cada vez que haces push a main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout main
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   # Necesario para poder hacer push a otra rama
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18  
 
-      - run: npm install
-      - run: npm run build
+      - name: Install dependencies
+        run: npm install
 
-      - name: Deploy to dist branch
+      - name: Build Astro
+        run: npm run build
+
+      - name: Push to dist branch (opcional)
         run: |
           cd dist
           git init
@@ -34,3 +37,13 @@ jobs:
           git branch -M dist
           git remote add origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
           git push --force origin dist
+
+      - name: Deploy to Hostinger via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.HOSTINGER_HOST }}
+          username: ${{ secrets.HOSTINGER_USER }}
+          password: ${{ secrets.HOSTINGER_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /public_html/
+          protocol: sftp
