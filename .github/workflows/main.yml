@@ -39,11 +39,10 @@ jobs:
           git push --force origin dist
 
       - name: Deploy to Hostinger via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        uses: SamKirkland/FTP-Deploy-Action@4.3.6
         with:
-          server: ${{ secrets.HOSTINGER_HOST }}
-          username: ${{ secrets.HOSTINGER_USER }}
-          password: ${{ secrets.HOSTINGER_PASSWORD }}
+          ftp-server: sftp://$${{ secrets.HOSTINGER_HOST }}
+          ftp-username: $${{ secrets.HOSTINGER_USER }}
+          ftp-password: $${{ secrets.HOSTINGER_PASSWORD }}
           local-dir: ./dist/
           server-dir: /public_html/
-          protocol: sftp
