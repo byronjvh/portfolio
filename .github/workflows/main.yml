@@ -41,10 +41,9 @@ jobs:
       - name: Deploy via SFTP to Hostinger
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.HOSTINGER_HOST }}       # ej. 82.29.86.246
-          username: ${{ secrets.HOSTINGER_USER }}   # ej. u320875986
+          host: ${{ secrets.HOSTINGER_HOST }}     
+          username: ${{ secrets.HOSTINGER_USER }}  
           password: ${{ secrets.HOSTINGER_PASSWORD }}
           port: 65002                                # puerto SSH/SFTP que te dio Hostinger
           source: "./dist/*"                         # carpeta generada por Astro
           target: "/public_html/"                    # carpeta en el servidor
-          rm: true                                   # borra archivos remotos que ya no existen localmente
