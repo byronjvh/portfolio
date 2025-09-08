@@ -886,6 +886,10 @@ code span {
         display: inline-block;
     }
 
+    .gridList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
 
 @media screen and (min-width: 380px) {
