@@ -45,4 +45,4 @@ jobs:
           ftp-username: ${{ secrets.HOSTINGER_USER }}
           ftp-password: ${{ secrets.HOSTINGER_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/
+          remote-dir: /public_html/
